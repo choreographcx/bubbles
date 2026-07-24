@@ -1,0 +1,588 @@
+{
+  "type": "form",
+  "data": {
+    "fields": [
+      {
+        "wrapper_id": "wrapper-1784648736564-7230",
+        "fields": [
+          {
+            "element_id": "html-1",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<p>Thank you for opening your home and heart to one of our rescued animals.</p><p>Fostering gives a rescued pet the chance to experience a loving home environment rather than spending time in a kennel or boarding facility. It also helps us open up space for other animals in need of rescue and care.</p><p>Please take your time to answer the following questions carefully. Fostering is a meaningful responsibility that requires commitment, patience, and teamwork and we're here to support you every step of the way.</p><p>&#128231; Email: LittleAngelsUAE@outlook.com<br/>&#128241; WhatsApp: +971 50 808 3083<br/>&#128248; Instagram &amp; Facebook: @Bubbles.PetsRescue</p>"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-9876",
+        "fields": [
+          {
+            "element_id": "text-1",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Name of the rescue you are applying to foster for",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-4495",
+        "fields": [
+          {
+            "element_id": "section-1",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Foster Applicant Information",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-9453",
+        "fields": [
+          {
+            "element_id": "text-2",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Full name",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-4742",
+        "fields": [
+          {
+            "element_id": "textarea-1",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "Home address",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-8666",
+        "fields": [
+          {
+            "element_id": "phone-1",
+            "type": "phone",
+            "cols": "6",
+            "required": true,
+            "field_label": "Mobile number",
+            "placeholder": "",
+            "validation": false,
+            "phone_validation_type": "standard",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "phone-2",
+            "type": "phone",
+            "cols": "6",
+            "required": false,
+            "field_label": "Emergency contact number (or partner's, if married/in a relationship)",
+            "placeholder": "",
+            "validation": false,
+            "phone_validation_type": "standard",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-7840",
+        "fields": [
+          {
+            "element_id": "text-3",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "Nationality of yourself and partner if applicable",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "text-4",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "Occupation",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-9091",
+        "fields": [
+          {
+            "element_id": "text-5",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "How long have you lived in the UAE?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-6289",
+        "fields": [
+          {
+            "element_id": "section-2",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Home & Lifestyle",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-4344",
+        "fields": [
+          {
+            "element_id": "radio-1",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Type of residence",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Apartment",
+                "value": "apartment",
+                "limit": "",
+                "key": "opt-976924"
+              },
+              {
+                "label": "Villa",
+                "value": "villa",
+                "limit": "",
+                "key": "opt-440875"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-2894",
+        "fields": [
+          {
+            "element_id": "radio-2",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you own or rent your home?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Own",
+                "value": "own",
+                "limit": "",
+                "key": "opt-858679"
+              },
+              {
+                "label": "Rent",
+                "value": "rent",
+                "limit": "",
+                "key": "opt-135032"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-4718",
+        "fields": [
+          {
+            "element_id": "radio-3",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Are you permitted to bring animals into the building?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-446547"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-543569"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-6352",
+        "fields": [
+          {
+            "element_id": "radio-4",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you currently have any pets?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-130967"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-273831"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-2926",
+        "fields": [
+          {
+            "element_id": "textarea-2",
+            "type": "textarea",
+            "cols": "12",
+            "required": false,
+            "field_label": "If yes, please specify their species, breed, and ages",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-9577",
+        "fields": [
+          {
+            "element_id": "radio-5",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you have children?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-902549"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-879299"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736564-8656",
+        "fields": [
+          {
+            "element_id": "textarea-3",
+            "type": "textarea",
+            "cols": "12",
+            "required": false,
+            "field_label": "If yes, please specify their ages and describe their experience with animals",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-9950",
+        "fields": [
+          {
+            "element_id": "radio-6",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you have experience with animals?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-314556"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-496542"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-2727",
+        "fields": [
+          {
+            "element_id": "textarea-4",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "Are you a first-time owner or a first-time foster parent? Please share details about your experience with animals.",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-4896",
+        "fields": [
+          {
+            "element_id": "radio-7",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you have a car, and are you comfortable doing the pickup and drop-off for fostering when needed?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-856848"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-923351"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-1146",
+        "fields": [
+          {
+            "element_id": "radio-8",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Would you consider adopting your foster animal if the experience goes well? (Note: there's an adoption form to fill later, and standard adoption fees will apply.)",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-497990"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-811958"
+              },
+              {
+                "label": "Maybe",
+                "value": "maybe",
+                "limit": "",
+                "key": "opt-593279"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-6959",
+        "fields": [
+          {
+            "element_id": "html-2",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<h3>&#128062; Foster Agreement &amp; Responsibilities</h3><p>As a valued foster parent with Bubbles Pets Rescue, we want you to know that we are here to make your experience simple, supported, and rewarding. By submitting this form, you acknowledge that you understand and agree to the following guidelines:</p><p><strong>1. Animal safety and responsibility</strong><br/>Foster animals remain under the legal care and ownership of Bubbles Pets Rescue at all times. Each rescue animal is microchipped and registered under the organization. You are advised not to rehome, hand over, or transfer the foster animal to anyone, including friends, family, or other fosters, without first informing and receiving approval from the rescue. If a foster parent goes out of contact or transfers the animal without communication, the rescue will take legal action and reclaim the animal through the appropriate authorities.</p><p><strong>2. Regular communication</strong><br/>We kindly ask all fosters to send weekly photos and short videos of their foster animal. These updates are used to maintain the animal's adoption profile and to help us find them a permanent home faster.</p><p><strong>3. Adoption process</strong><br/>Once a rescue moves into your care, Bubbles Pets Rescue will continue promoting them for adoption. Updates, photos, and progress stories may be shared publicly on our social media pages. If an adopter is selected, we will reach out to coordinate a meeting or collection with you directly.</p><p><strong>4. Helping us find homes</strong><br/>You are more than welcome to share your foster's story, photos, and updates with your own network to help find potential adopters, and we are grateful for your support with this. However, anyone interested in adopting must contact Bubbles Pets Rescue directly via WhatsApp to continue through the official adoption process.</p><p><strong>5. Traveling or change of circumstances</strong><br/>If you experience any changes, such as travel plans, a change of mind, or personal situations, please don't worry. We will always take full responsibility for the rescue and arrange their next steps safely. We simply ask that you inform us as early as possible (ideally with at least one week's notice) so that we can prepare accordingly. If you are traveling during your foster period, please reach out so we can discuss the best solution together.</p><p><strong>6. Health and veterinary care</strong><br/>All foster animals come healthy, vaccinated, spayed/neutered, and cleared from isolation, unless you have agreed to foster one under medical care. Should any veterinary care be needed during fostering, please contact us immediately. Bubbles Pets Rescue will handle all coordination and cover approved medical costs through our partner clinic. We kindly expect foster parents to provide attentive care and maintain the animal's well-being throughout the foster period, and to return animals to us in good health, not in a worsened condition.</p><p><strong>7. Food and supplies</strong><br/>We do our best to provide food and basic items depending on donations and stock availability. In times when supplies are limited, we appreciate your help in arranging food or essentials for your foster pet.</p><p><strong>8. Support and guidance</strong><br/>You'll always have our full support. Our team is just a WhatsApp message away for any questions, concerns, or advice, from the moment your foster arrives until they find their forever home.</p><p><strong>9. Commitment and honesty</strong><br/>All information shared in this form is confirmed to be true and complete. Fostering is a temporary but vital step that helps rescued animals transition to a permanent, loving home.</p><p><strong>10. Adoption of your foster pet</strong><br/>We absolutely love \"foster fails\", when a foster parent falls in love and decides to give their rescue a forever home. If you decide to adopt your foster pet during your foster period, please inform Bubbles Pets Rescue as soon as possible. Since we continuously promote our rescues for adoption, it's important that we know your decision before another adoption is confirmed. In this case, you'll be asked to complete our Adoption Application Form, and the standard adoption fee will apply. We'll then discuss and finalize everything together to make it official, turning your foster into family.</p>"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-6314",
+        "fields": [
+          {
+            "element_id": "consent-1",
+            "type": "consent",
+            "cols": "12",
+            "required": true,
+            "field_label": "",
+            "placeholder": "",
+            "consent_description": "I have read, understood, and agree to the Foster Agreement &amp; Responsibilities above, and I confirm that all information provided in this form is true and complete.",
+            "consent_type": "checkbox"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-6710",
+        "fields": [
+          {
+            "element_id": "text-6",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "Name of foster animal",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "text-7",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "Emirates ID number",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-6869",
+        "fields": [
+          {
+            "element_id": "signature-1",
+            "type": "signature",
+            "cols": "12",
+            "required": true,
+            "field_label": "Applicant signature",
+            "placeholder": "",
+            "icon": "true",
+            "height": "150",
+            "thickness": "2"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-5368",
+        "fields": [
+          {
+            "element_id": "date-1",
+            "type": "date",
+            "cols": "12",
+            "required": true,
+            "field_label": "Date",
+            "placeholder": "",
+            "field_type": "picker",
+            "date_format": "dd/mm/yy",
+            "icon": "true",
+            "default_date": "none",
+            "start_year": "",
+            "end_year": "",
+            "start_offset_type": "+",
+            "end_offset_type": "+"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648736565-8348",
+        "fields": [
+          {
+            "element_id": "html-3",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<h3>&#128204; Important Note</h3><p>Please notify us once you've completed this form. As a small volunteer-run rescue, we manage many aspects of animal care and may not respond immediately, but you're always welcome to follow up about your application. We truly appreciate your kindness, time, and compassion in helping us give our rescues a second chance at happiness.</p>"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "formName": "Foster Application - Bubbles Pets Rescue",
+      "version": "1.0",
+      "pagination-header": "nav",
+      "cform-section-border-color": "#E9E9E9",
+      "form-expire": "no_expire",
+      "form-border-style": "none",
+      "form-padding": "",
+      "form-border": "",
+      "fields-style": "open",
+      "field-image-size": "custom",
+      "validation": "on_submit",
+      "validation-inline": true,
+      "akismet-protection": "true",
+      "form-style": "default",
+      "form-substyle": "default",
+      "enable-ajax": "true",
+      "autoclose": "true",
+      "submission-indicator": "show",
+      "indicator-label": "Submitting form",
+      "paginationData": {
+        "pagination-header-design": "show",
+        "pagination-header": "nav"
+      },
+      "submitData": {
+        "custom-submit-text": "Submit Foster Application",
+        "custom-invalid-form-message": "Error: Please review the highlighted fields and try again."
+      },
+      "enable-fraud-detection": "true",
+      "store_submissions": "1",
+      "use-admin-email": "true",
+      "admin-email-recipients": [
+        "LittleAngelsUAE@outlook.com"
+      ],
+      "thankyou": "true",
+      "thankyou-message": "Thank you! Your application has been received. Our volunteer team will review it and get back to you as soon as we can. You're always welcome to follow up on WhatsApp: +971 50 808 3083."
+    },
+    "client_id": "",
+    "notifications": [
+      {
+        "slug": "notification-1255-6274",
+        "label": "Admin Email",
+        "email-recipients": "default",
+        "recipients": "LittleAngelsUAE@outlook.com",
+        "email-subject": "New Foster Application - Bubbles Pets Rescue Entry #{submission_id}",
+        "email-editor": "You have a new submission for Foster Application - Bubbles Pets Rescue:<br/><br/>{all_fields}<br/><br/>---<br/>Sent from {site_url}"
+      }
+    ],
+    "status": "publish",
+    "version": "1.30.0"
+  }
+}

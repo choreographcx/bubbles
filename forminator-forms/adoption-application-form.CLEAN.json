@@ -1,0 +1,1571 @@
+{
+  "type": "form",
+  "data": {
+    "fields": [
+      {
+        "wrapper_id": "wrapper-1784648777652-3710",
+        "fields": [
+          {
+            "element_id": "html-1",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<p>Thank you for your interest in adoption.</p><p>We are an all-volunteer animal welfare organization dedicated to rescuing and re-homing stray, neglected, abandoned, abused, and surrendered pets.</p><p><strong>Please note: BPR is not a shelter.</strong> All of our rescues are cared for by team members and are sheltered in personal spaces, foster homes, paid boarding facilities, and vet clinics until a forever home is found.</p><p>The more information you share, the better we can match you with the right companion.</p><p>⚠️ Failing to complete this form fully may result in your application not being considered for adoption of the rescue you are applying for.</p>"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7675",
+        "fields": [
+          {
+            "element_id": "text-1",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Name of the rescue you are interested in",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7166",
+        "fields": [
+          {
+            "element_id": "section-1",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Applicant Information",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-9506",
+        "fields": [
+          {
+            "element_id": "radio-1",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Marital status",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Single",
+                "value": "single",
+                "limit": "",
+                "key": "opt-353374"
+              },
+              {
+                "label": "Married",
+                "value": "married",
+                "limit": "",
+                "key": "opt-252877"
+              },
+              {
+                "label": "In a relationship",
+                "value": "in-a-relationship",
+                "limit": "",
+                "key": "opt-552988"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4527",
+        "fields": [
+          {
+            "element_id": "section-2",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Applicant 1 (or Single Applicant) Details",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8592",
+        "fields": [
+          {
+            "element_id": "text-2",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "Full name",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "number-1",
+            "type": "number",
+            "cols": "6",
+            "required": true,
+            "field_label": "Age",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4982",
+        "fields": [
+          {
+            "element_id": "text-3",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "Nationality",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "phone-1",
+            "type": "phone",
+            "cols": "6",
+            "required": true,
+            "field_label": "Phone number",
+            "placeholder": "",
+            "validation": false,
+            "phone_validation_type": "standard",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7219",
+        "fields": [
+          {
+            "element_id": "text-4",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Occupation",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3827",
+        "fields": [
+          {
+            "element_id": "textarea-1",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "Address",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-2043",
+        "fields": [
+          {
+            "element_id": "text-5",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "District/area",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-6848",
+        "fields": [
+          {
+            "element_id": "radio-2",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Type of home",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Villa",
+                "value": "villa",
+                "limit": "",
+                "key": "opt-621554"
+              },
+              {
+                "label": "Apartment",
+                "value": "apartment",
+                "limit": "",
+                "key": "opt-747992"
+              },
+              {
+                "label": "Other",
+                "value": "other",
+                "limit": "",
+                "key": "opt-616438"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-2660",
+        "fields": [
+          {
+            "element_id": "radio-3",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you own or rent your home?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Own",
+                "value": "own",
+                "limit": "",
+                "key": "opt-316734"
+              },
+              {
+                "label": "Rent",
+                "value": "rent",
+                "limit": "",
+                "key": "opt-144326"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5175",
+        "fields": [
+          {
+            "element_id": "radio-4",
+            "type": "radio",
+            "cols": "12",
+            "required": false,
+            "field_label": "If you rent, does your landlord allow pets?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-725876"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-199186"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-2005",
+        "fields": [
+          {
+            "element_id": "radio-5",
+            "type": "radio",
+            "cols": "12",
+            "required": false,
+            "field_label": "If no, do you have written approval from your landlord or company?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-340727"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-417775"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5293",
+        "fields": [
+          {
+            "element_id": "text-6",
+            "type": "text",
+            "cols": "12",
+            "required": false,
+            "field_label": "If apartment: do you have a balcony? If yes, is it fully fenced?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7679",
+        "fields": [
+          {
+            "element_id": "text-7",
+            "type": "text",
+            "cols": "12",
+            "required": false,
+            "field_label": "Do you have a garden? If yes, is it fully fenced?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4546",
+        "fields": [
+          {
+            "element_id": "text-8",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "How long have you been living in the UAE?",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "text-9",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "How long do you plan to stay in the UAE?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1613",
+        "fields": [
+          {
+            "element_id": "section-3",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Applicant 2 (Partner, if Married or in a Relationship)",
+            "section_subtitle": "Leave blank if not applicable",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-9454",
+        "fields": [
+          {
+            "element_id": "text-10",
+            "type": "text",
+            "cols": "6",
+            "required": false,
+            "field_label": "Full name",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "number-2",
+            "type": "number",
+            "cols": "6",
+            "required": false,
+            "field_label": "Age",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7407",
+        "fields": [
+          {
+            "element_id": "text-11",
+            "type": "text",
+            "cols": "6",
+            "required": false,
+            "field_label": "Nationality",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "phone-2",
+            "type": "phone",
+            "cols": "6",
+            "required": false,
+            "field_label": "Phone number",
+            "placeholder": "",
+            "validation": false,
+            "phone_validation_type": "standard",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8913",
+        "fields": [
+          {
+            "element_id": "text-12",
+            "type": "text",
+            "cols": "6",
+            "required": false,
+            "field_label": "Occupation",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "text-13",
+            "type": "text",
+            "cols": "6",
+            "required": false,
+            "field_label": "How long have you been living in the UAE?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7736",
+        "fields": [
+          {
+            "element_id": "section-4",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Household Information",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3290",
+        "fields": [
+          {
+            "element_id": "number-3",
+            "type": "number",
+            "cols": "12",
+            "required": true,
+            "field_label": "How many adults live in your home?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7884",
+        "fields": [
+          {
+            "element_id": "text-14",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "How many children (and their ages)?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4149",
+        "fields": [
+          {
+            "element_id": "textarea-2",
+            "type": "textarea",
+            "cols": "12",
+            "required": false,
+            "field_label": "If you have children, what is their experience with animals?",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1921",
+        "fields": [
+          {
+            "element_id": "radio-6",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Does anyone in your home have allergies or asthma related to animals?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-266126"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-726835"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-6166",
+        "fields": [
+          {
+            "element_id": "section-5",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Pet Preferences",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3552",
+        "fields": [
+          {
+            "element_id": "text-15",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Name of the rescue you are applying for",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8620",
+        "fields": [
+          {
+            "element_id": "radio-7",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Would you be open to other suitable matches if this animal is adopted?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-911257"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-563729"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4226",
+        "fields": [
+          {
+            "element_id": "text-16",
+            "type": "text",
+            "cols": "6",
+            "required": false,
+            "field_label": "Preferred age",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "text-17",
+            "type": "text",
+            "cols": "6",
+            "required": false,
+            "field_label": "Preferred gender",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1955",
+        "fields": [
+          {
+            "element_id": "text-18",
+            "type": "text",
+            "cols": "12",
+            "required": false,
+            "field_label": "Preferred size or breed (if any)",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4215",
+        "fields": [
+          {
+            "element_id": "textarea-3",
+            "type": "textarea",
+            "cols": "12",
+            "required": false,
+            "field_label": "What personality traits are you looking for in a pet? (e.g., calm, active, playful, affectionate)",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-9400",
+        "fields": [
+          {
+            "element_id": "section-6",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Current & Previous Pets",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5286",
+        "fields": [
+          {
+            "element_id": "radio-8",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you currently have any pets?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-320494"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-446269"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5555",
+        "fields": [
+          {
+            "element_id": "textarea-4",
+            "type": "textarea",
+            "cols": "12",
+            "required": false,
+            "field_label": "If yes, please list their species, age, gender, and if sterilized",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3636",
+        "fields": [
+          {
+            "element_id": "radio-9",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Have you owned pets before, or will this be your first pet?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Owned pets before",
+                "value": "owned-pets-before",
+                "limit": "",
+                "key": "opt-687295"
+              },
+              {
+                "label": "First pet",
+                "value": "first-pet",
+                "limit": "",
+                "key": "opt-484459"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5755",
+        "fields": [
+          {
+            "element_id": "textarea-5",
+            "type": "textarea",
+            "cols": "12",
+            "required": false,
+            "field_label": "If you had pets before, what happened to them?",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5045",
+        "fields": [
+          {
+            "element_id": "radio-10",
+            "type": "radio",
+            "cols": "12",
+            "required": false,
+            "field_label": "Have you ever relocated internationally with your pet?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-131110"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-481894"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1749",
+        "fields": [
+          {
+            "element_id": "radio-11",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Have you ever euthanized an animal?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-944629"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-496907"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-2622",
+        "fields": [
+          {
+            "element_id": "textarea-6",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "If yes, please specify why. If no, please provide your thoughts on euthanasia.",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4110",
+        "fields": [
+          {
+            "element_id": "text-19",
+            "type": "text",
+            "cols": "12",
+            "required": false,
+            "field_label": "If your pets were adopted, please name the rescue group(s)",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8048",
+        "fields": [
+          {
+            "element_id": "section-7",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Daily Care & Lifestyle",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7385",
+        "fields": [
+          {
+            "element_id": "text-20",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "How many hours a day will the pet be alone?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4323",
+        "fields": [
+          {
+            "element_id": "radio-12",
+            "type": "radio",
+            "cols": "12",
+            "required": false,
+            "field_label": "If your pet will be left alone for long hours, are you willing to consider daycare, a pet sitter, or a dog walker?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-144107"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-724330"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-9687",
+        "fields": [
+          {
+            "element_id": "text-21",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Where will the pet sleep at night?",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5055",
+        "fields": [
+          {
+            "element_id": "textarea-7",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "How often do you travel, and what arrangements will you make for your pet when you do?",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-9103",
+        "fields": [
+          {
+            "element_id": "textarea-8",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "What would your plan be if you had to leave the UAE permanently?",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-6685",
+        "fields": [
+          {
+            "element_id": "radio-13",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you plan to keep your pet primarily indoors, outdoors, or a mix of both?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Indoors",
+                "value": "indoors",
+                "limit": "",
+                "key": "opt-731010"
+              },
+              {
+                "label": "Outdoors",
+                "value": "outdoors",
+                "limit": "",
+                "key": "opt-799079"
+              },
+              {
+                "label": "Mix of both",
+                "value": "mix-of-both",
+                "limit": "",
+                "key": "opt-195073"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3152",
+        "fields": [
+          {
+            "element_id": "textarea-9",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "If your pet shows behavioral issues (e.g., chewing, scratching, fear, or aggression), how would you handle it?",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-2376",
+        "fields": [
+          {
+            "element_id": "section-8",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Commitment & Understanding",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4124",
+        "fields": [
+          {
+            "element_id": "radio-14",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Are you aware that adopting a pet is a long-term commitment (10-15 years or more)?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-414492"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-641029"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8710",
+        "fields": [
+          {
+            "element_id": "radio-15",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you agree with spaying and neutering pets?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-910087"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-946852"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1478",
+        "fields": [
+          {
+            "element_id": "textarea-10",
+            "type": "textarea",
+            "cols": "12",
+            "required": false,
+            "field_label": "If no, please elaborate",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8207",
+        "fields": [
+          {
+            "element_id": "radio-16",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Would you be willing to provide updates, photos, and stay in touch after adoption?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-635669"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-423948"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1220",
+        "fields": [
+          {
+            "element_id": "radio-17",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you understand that some rescues may take time to adjust and need patience and training?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-329583"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-360047"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8339",
+        "fields": [
+          {
+            "element_id": "radio-18",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "If training was required, are you willing to provide that?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-873321"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-125724"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1006",
+        "fields": [
+          {
+            "element_id": "section-9",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Veterinary & Animal Care Awareness",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8422",
+        "fields": [
+          {
+            "element_id": "radio-19",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Do you currently have a veterinarian?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-889644"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-961148"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5787",
+        "fields": [
+          {
+            "element_id": "text-22",
+            "type": "text",
+            "cols": "12",
+            "required": false,
+            "field_label": "If yes, please provide their name or clinic information",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3840",
+        "fields": [
+          {
+            "element_id": "radio-20",
+            "type": "radio",
+            "cols": "12",
+            "required": false,
+            "field_label": "Are you vegetarian or vegan?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-751371"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-340270"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3702",
+        "fields": [
+          {
+            "element_id": "radio-21",
+            "type": "radio",
+            "cols": "12",
+            "required": false,
+            "field_label": "If yes, are you comfortable with feeding animal-based protein as part of your pet's diet?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-146103"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-245152"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3783",
+        "fields": [
+          {
+            "element_id": "textarea-11",
+            "type": "textarea",
+            "cols": "12",
+            "required": true,
+            "field_label": "What type of food do you plan to feed your pet? (Please specify brand, diet type, or whether you prefer dry, wet, or raw food)",
+            "placeholder": "",
+            "input_type": "paragraph",
+            "limit_type": "characters",
+            "default_editor": "false"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-6070",
+        "fields": [
+          {
+            "element_id": "radio-22",
+            "type": "radio",
+            "cols": "12",
+            "required": true,
+            "field_label": "Are you financially prepared for regular check-ups, vaccinations, emergencies, and quality food?",
+            "placeholder": "",
+            "value_type": "radio",
+            "layout": "inline",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes",
+                "limit": "",
+                "key": "opt-783246"
+              },
+              {
+                "label": "No",
+                "value": "no",
+                "limit": "",
+                "key": "opt-573845"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-6788",
+        "fields": [
+          {
+            "element_id": "html-2",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<p><strong>Are you aware of the average costs involved in the following?</strong><br/>(If you are not aware, please ask us or do research accordingly.)<br/>Please provide your estimated costs (in AED) for each:</p>"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7041",
+        "fields": [
+          {
+            "element_id": "text-23",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Veterinary care and vaccinations (annual and emergency)",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5844",
+        "fields": [
+          {
+            "element_id": "text-24",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Pet relocation (international)",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4261",
+        "fields": [
+          {
+            "element_id": "text-25",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Daycare, boarding, or pet sitting during travel",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-5171",
+        "fields": [
+          {
+            "element_id": "section-10",
+            "type": "section",
+            "cols": "12",
+            "section_title": "✍️ Declaration",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8375",
+        "fields": [
+          {
+            "element_id": "consent-1",
+            "type": "consent",
+            "cols": "12",
+            "required": true,
+            "field_label": "",
+            "placeholder": "",
+            "consent_description": "I confirm that the information provided is true and complete to the best of my knowledge. I understand that completing this form does not guarantee approval, and that Bubbles Pets Rescue reserves the right to deny any application if it's not in the best interest of the animal.",
+            "consent_type": "checkbox"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-4858",
+        "fields": [
+          {
+            "element_id": "text-26",
+            "type": "text",
+            "cols": "6",
+            "required": true,
+            "field_label": "Emirates ID number",
+            "placeholder": "",
+            "limit_type": "characters"
+          },
+          {
+            "element_id": "date-1",
+            "type": "date",
+            "cols": "12",
+            "required": true,
+            "field_label": "Date",
+            "placeholder": "",
+            "field_type": "picker",
+            "date_format": "dd/mm/yy",
+            "icon": "true",
+            "default_date": "none",
+            "start_year": "",
+            "end_year": "",
+            "start_offset_type": "+",
+            "end_offset_type": "+"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-2238",
+        "fields": [
+          {
+            "element_id": "html-3",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<h3>&#128196; Important Information Agreement Before Adoption</h3><p>Thank you for taking the time to apply for adoption. At Bubbles Pets Rescue, every animal in our care has been rescued from neglect, abandonment, surrender, or difficult circumstances. We ensure each one receives full veterinary care, socialization, and love before they are ready for adoption. Our rescues matter deeply to us.</p><p><strong>Before submitting your form, please take note of the following:</strong></p><p><strong>1. &#128062; Health &amp; care</strong><br/>All animals are sterilized, treated, vaccinated, and microchipped prior to adoption (unless medically advised otherwise). Some may need ongoing medical follow-ups, which will be discussed during the interview.</p><p><strong>2. &#127969; Home visits &amp; screening</strong><br/>We may request a home visit or video call before approving an adoption to ensure a safe and suitable environment.</p><p><strong>3. Adoption fees</strong><br/>Our adoption fees vary for each rescue and range between AED 800 and AED 4,000. These fees are a reimbursement that supports the ongoing rescue work and care of our animals. They are non-refundable, except during the trial period, which will be discussed during the interview.</p><p><strong>4. &#128683; Rehoming policy</strong><br/>Rehoming, selling, or giving away an adopted animal is strictly prohibited. If, for any reason, your adoption does not work out or your life circumstances change, you are required to inform Bubbles Pets Rescue immediately. You must contact us to discuss the situation before making any decision to rehome the animal. In such cases, the adopted animal must be returned to Bubbles Pets Rescue, and we will work together to ensure the best possible outcome for the animal. All rescued animals remain microchipped under Bubbles Pets Rescue's name to ensure their lifelong safety and traceability. Any unauthorized rehoming will result in appropriate action being taken by the organization.</p><p><strong>5. &#128172; Response time &amp; application review</strong><br/>Please note that filling out this form does not guarantee adoption. Once your form is reviewed and if approved, we will contact you to schedule an interview and meet the animal you are interested in. Because we are a small volunteer team, responses may take 1 to 3 days, and occasionally up to one week, depending on workload and the rescue's situation. You are welcome to follow up on your application at any time. If your form is not selected, we may not always be able to notify you, especially for high-demand rescues. This may be due to finding a better home match or suitability for the specific animal. You are encouraged to follow up personally for an update on your application status.</p><p><strong>6. &#128248; Sharing adoption stories</strong><br/>We may kindly request photos or short updates after adoption to celebrate and share successful rescue stories on our pages. Family or pet pictures are completely optional, but they help us spread awareness and joy by showing happy endings made possible through adoption.</p>"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-7999",
+        "fields": [
+          {
+            "element_id": "section-11",
+            "type": "section",
+            "cols": "12",
+            "section_title": "Acknowledgment & Signature",
+            "section_subtitle": "",
+            "section_border": "none"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3888",
+        "fields": [
+          {
+            "element_id": "consent-2",
+            "type": "consent",
+            "cols": "12",
+            "required": true,
+            "field_label": "",
+            "placeholder": "",
+            "consent_description": "I confirm that I have read, understood, and agree to the Important Information Agreement Before Adoption provided by Bubbles Pets Rescue.",
+            "consent_type": "checkbox"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1587",
+        "fields": [
+          {
+            "element_id": "text-27",
+            "type": "text",
+            "cols": "12",
+            "required": true,
+            "field_label": "Applicant's full name",
+            "placeholder": "",
+            "limit_type": "characters"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-3755",
+        "fields": [
+          {
+            "element_id": "signature-1",
+            "type": "signature",
+            "cols": "12",
+            "required": true,
+            "field_label": "Signature",
+            "placeholder": "",
+            "icon": "true",
+            "height": "150",
+            "thickness": "2"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-1376",
+        "fields": [
+          {
+            "element_id": "html-4",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<h3>&#128274; Confidentiality Notice</h3><p>All personal information provided in this form will remain strictly confidential and used solely for adoption screening and rescue-related purposes by Bubbles Pets Rescue. It will not be shared, published, or disclosed to any third party.</p>"
+          }
+        ]
+      },
+      {
+        "wrapper_id": "wrapper-1784648777652-8900",
+        "fields": [
+          {
+            "element_id": "html-5",
+            "type": "html",
+            "cols": "12",
+            "field_label": "",
+            "variations": "<h3>&#128222; Contact Us</h3><p>&#128241; WhatsApp: +971 50 808 3083<br/>&#128248; Instagram: @Bubbles.petsrescue<br/>&#128216; Facebook: Bubbles.petsrescue<br/>&#128231; Email: LittleAngelsUae@outlook.com</p><p><strong>Thank you for choosing adoption and giving a rescue animal a second chance at life.</strong></p>"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "formName": "Adoption Application - Bubbles Pets Rescue",
+      "version": "1.0",
+      "pagination-header": "nav",
+      "cform-section-border-color": "#E9E9E9",
+      "form-expire": "no_expire",
+      "form-border-style": "none",
+      "form-padding": "",
+      "form-border": "",
+      "fields-style": "open",
+      "field-image-size": "custom",
+      "validation": "on_submit",
+      "validation-inline": true,
+      "akismet-protection": "true",
+      "form-style": "default",
+      "form-substyle": "default",
+      "enable-ajax": "true",
+      "autoclose": "true",
+      "submission-indicator": "show",
+      "indicator-label": "Submitting form",
+      "paginationData": {
+        "pagination-header-design": "show",
+        "pagination-header": "nav"
+      },
+      "submitData": {
+        "custom-submit-text": "Submit Adoption Application",
+        "custom-invalid-form-message": "Error: Please review the highlighted fields and try again."
+      },
+      "enable-fraud-detection": "true",
+      "store_submissions": "1",
+      "use-admin-email": "true",
+      "admin-email-recipients": [
+        "LittleAngelsUAE@outlook.com"
+      ],
+      "thankyou": "true",
+      "thankyou-message": "Thank you! Your application has been received. Our volunteer team will review it and get back to you as soon as we can. You're always welcome to follow up on WhatsApp: +971 50 808 3083."
+    },
+    "client_id": "",
+    "notifications": [
+      {
+        "slug": "notification-9729-5175",
+        "label": "Admin Email",
+        "email-recipients": "default",
+        "recipients": "LittleAngelsUAE@outlook.com",
+        "email-subject": "New Adoption Application - Bubbles Pets Rescue Entry #{submission_id}",
+        "email-editor": "You have a new submission for Adoption Application - Bubbles Pets Rescue:<br/><br/>{all_fields}<br/><br/>---<br/>Sent from {site_url}"
+      }
+    ],
+    "status": "publish",
+    "version": "1.30.0"
+  }
+}
