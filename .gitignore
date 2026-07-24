@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------------------
+# WordPress .gitignore for the Bubbles site
+#
+# We ONLY track wp-content (your themes, plugins, and — optionally — uploads).
+# WordPress core and secrets are deliberately ignored: they don't belong in
+# version control and wp-config.php contains your database password.
+# ---------------------------------------------------------------------------
+
+# WordPress core (managed by WordPress itself, not by us)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+
+# Secrets & config — NEVER commit these
+wp-config.php
+.htaccess
+
+# Ignore everything in wp-content by default, then un-ignore the parts we DO
+# want to track. This keeps random cache/upgrade files out of the repo.
+wp-content/*
+!wp-content/themes/
+!wp-content/plugins/
+!wp-content/uploads/
+
+# Junk inside the tracked folders
+wp-content/uploads/cache/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backup*/
+wp-content/*.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp

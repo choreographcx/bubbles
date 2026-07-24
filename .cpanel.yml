@@ -1,0 +1,15 @@
+---
+# ---------------------------------------------------------------------------
+# cPanel deployment config for the Bubbles WordPress site.
+#
+# When you click "Deploy HEAD Commit" on the cPanel Git Version Control page
+# (or run `git push` to this repo), cPanel runs the tasks below. They copy the
+# tracked wp-content into your live site directory.
+#
+# NOTE: cp is non-destructive here — it adds/overwrites files but never deletes
+# media that only exists on the live server. Uploaded images stay safe.
+# ---------------------------------------------------------------------------
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/bubblespetrescue/public_html
+    - /bin/cp -R wp-content "$DEPLOYPATH"/
