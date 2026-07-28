@@ -1,0 +1,72 @@
+/**
+ * Admin tweaks for the dog list and edit screens.
+ */
+
+.bpr-dogs-pill {
+	display: inline-block;
+	padding: 0.15em 0.7em;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: #fff;
+	background: #646970;
+	white-space: nowrap;
+}
+
+.bpr-dogs-pill--available {
+	background: #1e7a4c;
+}
+
+.bpr-dogs-pill--reserved {
+	background: #b26a00;
+}
+
+.bpr-dogs-pill--hold {
+	background: #646970;
+}
+
+.bpr-dogs-pill--adopted {
+	background: #2271b1;
+}
+
+/* Long-stay dogs — the ones most likely to need a fresh push. */
+.bpr-dogs-longstay {
+	font-weight: 700;
+	color: #b32d2e;
+}
+
+.column-bpr_photo {
+	width: 70px;
+}
+
+.column-bpr_photo img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 4px;
+	display: block;
+}
+
+.column-bpr_status,
+.column-bpr_age {
+	width: 110px;
+}
+
+.column-bpr_days {
+	width: 110px;
+	text-align: center;
+}
+
+.bpr-dogs-nophoto {
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	opacity: 0.4;
+}
+
+.bpr-dogs-gallery-note {
+	margin: 0 0 0.5rem;
+	padding: 0.75rem 1rem;
+	background: #f6f7f7;
+	border-left: 4px solid #2271b1;
+}

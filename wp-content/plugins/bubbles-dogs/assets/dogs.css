@@ -1,0 +1,260 @@
+/**
+ * Front-end styles for dog listings.
+ *
+ * Deliberately restrained: inherits the theme's fonts and colours wherever
+ * possible, and only sets what it has to for layout. Override any of these in
+ * the theme's stylesheet.
+ */
+
+.bpr-dog-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 1.75rem;
+	margin: 2rem 0;
+}
+
+.bpr-dog-card {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.02);
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bpr-dog-card:hover,
+.bpr-dog-card:focus-within {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.bpr-dog-card__link {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+}
+
+.bpr-dog-card__media {
+	position: relative;
+	aspect-ratio: 4 / 3;
+	background: rgba(0, 0, 0, 0.05);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bpr-dog-card__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.bpr-dog-card__noimage {
+	font-size: 2.5rem;
+	opacity: 0.35;
+}
+
+.bpr-dog-card__badge {
+	position: absolute;
+	top: 0.75rem;
+	left: 0.75rem;
+	padding: 0.2em 0.7em;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	background: #444;
+	color: #fff;
+}
+
+.bpr-dog-card__badge--reserved {
+	background: #b26a00;
+}
+
+.bpr-dog-card__badge--hold {
+	background: #5a5a5a;
+}
+
+.bpr-dog-card__badge--adopted {
+	background: #1e7a4c;
+}
+
+.bpr-dog-card__name {
+	margin: 0.9rem 0.9rem 0.25rem;
+	font-size: 1.15rem;
+	line-height: 1.2;
+}
+
+.bpr-dog-card__meta,
+.bpr-dog-card__size,
+.bpr-dog-card__excerpt {
+	margin: 0 0.9rem 0.5rem;
+	font-size: 0.9rem;
+}
+
+.bpr-dog-card__meta {
+	opacity: 0.75;
+}
+
+.bpr-dog-card__size a {
+	text-decoration: none;
+}
+
+.bpr-dog-card__excerpt {
+	padding-bottom: 0.5rem;
+	opacity: 0.85;
+}
+
+/* --- Filter bar --- */
+
+.bpr-dog-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	align-items: center;
+	margin: 1.5rem 0;
+	padding: 1rem 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bpr-dog-filters__group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.bpr-dog-filters__label {
+	font-weight: 700;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	opacity: 0.6;
+}
+
+.bpr-dog-filters__item {
+	display: inline-block;
+	padding: 0.3em 0.85em;
+	border: 1px solid rgba(0, 0, 0, 0.18);
+	border-radius: 999px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	color: inherit;
+}
+
+.bpr-dog-filters__item:hover,
+.bpr-dog-filters__item:focus {
+	border-color: currentColor;
+}
+
+.bpr-dog-filters__item.is-active {
+	background: currentColor;
+	border-color: currentColor;
+}
+
+.bpr-dog-filters__item.is-active {
+	/* Keep the label readable against the filled pill. */
+	color: #fff;
+	background: #333;
+	border-color: #333;
+}
+
+/* --- Single dog --- */
+
+.bpr-dog-details {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 0.75rem 2rem;
+	margin: 2rem 0;
+	padding: 1.25rem 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bpr-dog-details__row {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+}
+
+.bpr-dog-details dt {
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	opacity: 0.6;
+}
+
+.bpr-dog-details dd {
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+.bpr-dog-cta {
+	margin: 2rem 0;
+}
+
+.bpr-dog-apply {
+	display: inline-block;
+	padding: 0.8em 1.9em;
+	border-radius: 999px;
+	background: #c2185b;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.bpr-dog-apply:hover,
+.bpr-dog-apply:focus {
+	background: #99123f;
+	color: #fff;
+}
+
+.bpr-dog-cta--reserved,
+.bpr-dog-cta--adopted {
+	padding: 1rem 1.25rem;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.04);
+	border-left: 4px solid #b26a00;
+	font-size: 1.05rem;
+}
+
+.bpr-dog-cta--adopted {
+	border-left-color: #1e7a4c;
+}
+
+.bpr-dog-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 0.75rem;
+	margin: 2rem 0;
+}
+
+.bpr-dog-gallery__item img {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 8px;
+	display: block;
+}
+
+.bpr-dogs-empty {
+	padding: 1.5rem;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.04);
+	text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.bpr-dog-card {
+		transition: none;
+	}
+
+	.bpr-dog-card:hover,
+	.bpr-dog-card:focus-within {
+		transform: none;
+	}
+}

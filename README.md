@@ -42,3 +42,27 @@ Putting files in the repo does **not** change the live site until you *deploy*
 
 Edit files (in File Manager or locally) → `git add -A && git commit -m "..."`
 → **Deploy HEAD Commit**. Each commit is a restore point you can roll back to.
+
+## What's in this repo
+
+| Folder | What it is |
+|---|---|
+| `forminator-forms/` | Exports and SQL for the adoption and foster application forms |
+| `wp-content/plugins/bubbles-dogs/` | The **Bubbles Dogs** plugin — adoption listings and a bulk importer |
+
+### Bubbles Dogs
+
+Turns the dogs you post on Instagram and Facebook into proper listings on the
+website: a **Dogs** section in wp-admin with real fields (sex, age, weight,
+health, temperament), a filterable `/adopt-a-dog/` page, and an apply button
+that tells your Forminator form which dog an application is for.
+
+It also ships tooling for the one-off job of loading your current dogs: a script
+that turns a Meta "Download your information" export into a draft spreadsheet,
+and a WP-CLI importer that creates the listings and uploads the photos.
+
+Full setup and import instructions: `wp-content/plugins/bubbles-dogs/README.md`.
+
+Note that the plugin folder deploys on its own — `.gitignore` tracks
+`wp-content/plugins/`, so you do not need the rest of `wp-content` in the repo
+for this to work.
