@@ -70,3 +70,90 @@
 	background: #f6f7f7;
 	border-left: 4px solid #2271b1;
 }
+
+.bpr-dogs-placeholders {
+	margin: 0;
+	columns: 2;
+	column-gap: 2rem;
+}
+
+.bpr-dogs-placeholders li {
+	margin: 0 0 0.2rem;
+	break-inside: avoid;
+}
+
+/* --- Share this dog --- */
+
+.bpr-share__where {
+	margin: 0 0 0.4rem;
+}
+
+.bpr-share__option {
+	margin: 0 0 0.3rem;
+}
+
+.bpr-share__note {
+	color: #646970;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.bpr-share__caption-note {
+	margin-top: -0.4rem;
+}
+
+.bpr-share__caption {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.bpr-share__blocked {
+	margin: 0 0 0.75rem;
+	padding: 0.6rem 0.75rem;
+	background: #fcf9e8;
+	border-left: 4px solid #dba617;
+}
+
+.bpr-share__actions {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.bpr-share__spinner {
+	float: none;
+	margin: 0;
+	visibility: hidden;
+}
+
+.bpr-share__spinner.is-active {
+	visibility: visible;
+}
+
+.bpr-share__msg {
+	margin: 0.5rem 0;
+	padding: 0.6rem 0.75rem;
+	border-left: 4px solid #646970;
+	background: #f6f7f7;
+}
+
+.bpr-share__msg--ok {
+	border-left-color: #00a32a;
+}
+
+.bpr-share__msg--bad {
+	border-left-color: #d63638;
+}
+
+.bpr-share__log {
+	margin: 0.25rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bpr-share__log li {
+	margin: 0 0 0.25rem;
+	font-size: 12px;
+}

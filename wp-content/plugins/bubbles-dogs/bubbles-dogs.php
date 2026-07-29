@@ -26,6 +26,8 @@ require_once BPR_DOGS_DIR . 'includes/class-bpr-dogs-post-type.php';
 require_once BPR_DOGS_DIR . 'includes/class-bpr-dogs-admin.php';
 require_once BPR_DOGS_DIR . 'includes/class-bpr-dogs-settings.php';
 require_once BPR_DOGS_DIR . 'includes/class-bpr-dogs-display.php';
+require_once BPR_DOGS_DIR . 'includes/class-bpr-dogs-social.php';
+require_once BPR_DOGS_DIR . 'includes/class-bpr-dogs-social-admin.php';
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require_once BPR_DOGS_DIR . 'includes/class-bpr-dogs-import.php';
@@ -42,6 +44,7 @@ function bpr_dogs_bootstrap() {
 	BPR_Dogs_Admin::init();
 	BPR_Dogs_Settings::init();
 	BPR_Dogs_Display::init();
+	BPR_Dogs_Social_Admin::init();
 }
 add_action( 'plugins_loaded', 'bpr_dogs_bootstrap' );
 

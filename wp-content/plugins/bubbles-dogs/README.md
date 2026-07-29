@@ -15,6 +15,8 @@ bulk-load dogs from an Instagram or Facebook export.
   adoption form, so every application says which dog it is for.
 - A **CSV importer** for loading many dogs at once, and a parser that drafts
   that CSV from a Meta data export.
+- A **Share this dog** box for posting a dog to the Facebook Page and Instagram,
+  one dog at a time, always by choice.
 
 ## Installing
 
@@ -174,15 +176,105 @@ status field existed still shows on the listing rather than silently vanishing.
 **`travel_ready`** covers rehoming overseas with a flight volunteer. If you only
 rehome inside the UAE, delete that entry from the schema.
 
+## Sharing a dog to Facebook and Instagram
+
+Every dog has a **Share this dog** box in the sidebar of their edit screen. You
+tick which accounts to post to, read the caption, and press **Post now**.
+
+**Nothing is ever posted automatically.** There is no hook that fires on save or
+on publish. A person chooses, every time.
+
+The box also:
+
+- **Remembers what has already gone out**, with links to the live posts, and
+  asks you to confirm a second time before posting the same dog to the same
+  account twice.
+- **Unticks an account once it has posted**, so a stray second click can't
+  double-post.
+- **Reports each account separately.** If Instagram rejects an image but
+  Facebook worked, you're told exactly that rather than a single vague failure.
+
+### What you need to set up
+
+In **Dogs → Settings**, under *Sharing to Facebook and Instagram*:
+
+| Setting | Where to find it |
+|---|---|
+| Facebook Page ID | Meta Business Suite → Page settings, or the Page's About tab |
+| Instagram account ID | The Instagram *Business account ID* linked to the Page — not the @handle |
+| Access token | A long-lived Page access token (see below) |
+
+The token needs these permissions: `pages_manage_posts`,
+`pages_read_engagement`, `instagram_basic`, `instagram_content_publish`.
+
+Leave a Page ID or Instagram ID blank to turn that platform off.
+
+### Keep the token out of the database
+
+The safer place for the token is `wp-config.php`, which is neither in git nor in
+database backups:
+
+```php
+define( 'BPR_DOGS_ACCESS_TOKEN', 'your-long-lived-token' );
+```
+
+That takes priority over anything saved in the settings screen. If you do save
+it in the settings instead, the field renders empty afterwards and never shows
+the token back to you — leave it blank to keep the saved one, or tick *Delete
+the saved token* to clear it.
+
+### Captions
+
+Facebook and Instagram have separate templates, because **Instagram captions
+cannot contain clickable links** — so the Facebook template ends with the dog's
+URL and the Instagram one says "link in our bio".
+
+Placeholders: `{name}` `{sex}` `{age}` `{sex_age}` `{size}` `{breed}`
+`{weight}` `{location}` `{bio}` `{health}` `{url}` `{hashtags}`
+
+A placeholder with nothing behind it disappears, and the blank line it would
+have left is tidied up — so a dog with no recorded weight doesn't get a caption
+full of holes.
+
+The caption is editable in the box before you post. What you see is what goes
+out, to both accounts if you pick both.
+
+### Photos
+
+The main photo goes first, then any other photos attached to the dog. More than
+one becomes a **Facebook album** and an **Instagram carousel** (up to 10).
+
+Instagram is fussy in ways that produce baffling errors, so the plugin checks
+before uploading and tells you what's wrong in plain terms:
+
+- **Aspect ratio must be between 0.8:1 and 1.91:1.** Story-shaped and panoramic
+  photos are rejected. Square is safest.
+- **At least 320px wide, under 8MB.** If the original is too heavy the plugin
+  automatically uses a smaller generated size rather than failing.
+
+Facebook is much more relaxed and accepts almost anything.
+
+### Two things that will catch you out
+
+**The site must be publicly reachable.** Instagram fetches the image from your
+URL itself, so this cannot work on a password-protected, staging, or
+coming-soon site. Facebook has the same requirement.
+
+**Graph API versions expire.** Meta retires each one after roughly two years.
+If sharing suddenly fails complaining about an unsupported version, put the
+current version in the **Graph API version** setting — nothing else needs to
+change.
+
+### Who can post
+
+Sharing requires the `publish_posts` capability, not merely edit rights.
+Posting to the rescue's public accounts is a publishing action, so an
+Author-level volunteer who can draft a dog cannot push it to Instagram.
+
 ## Not included yet
 
-Automatic posting out to Instagram and Facebook. The groundwork is here — the
-Instagram account is a Business account linked to the Page, and the media
-library gives photos the public URLs the Content Publishing API needs. Two
-routes when you want it:
-
-- **Jetpack Social** — connect both accounts and publishing a dog auto-shares.
-  No code, but no control over the caption.
-- **Meta Graph API** in this plugin — templated captions, watermarks, an
-  automatic reshare of long-stay dogs. Needs a Meta app and a long-lived Page
-  token, and someone to own that token when it expires.
+- **Scheduling.** Posts go out when you press the button.
+- **Automatic reshares of long-stay dogs.** The admin list flags dogs over 180
+  days in rescue, but resharing them is still a manual decision.
+- **Posting an update when a dog is marked adopted.** Worth adding — the
+  "happy ending" post is the one that brings in new adopters.

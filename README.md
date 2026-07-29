@@ -61,6 +61,10 @@ It also ships tooling for the one-off job of loading your current dogs: a script
 that turns a Meta "Download your information" export into a draft spreadsheet,
 and a WP-CLI importer that creates the listings and uploads the photos.
 
+Each dog then has a **Share this dog** box for posting them to the Facebook Page
+and Instagram — you pick the accounts and check the caption each time. Nothing
+posts automatically.
+
 Full setup and import instructions: `wp-content/plugins/bubbles-dogs/README.md`.
 
 Note that the plugin folder deploys on its own — `.gitignore` tracks
