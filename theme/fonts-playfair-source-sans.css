@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Bubbles Pet Rescue — Google Fonts
+   Headings: Playfair Display   |   Body: Source Sans Pro (Source Sans 3)
+   Paste this into: Appearance > Customize > Additional CSS  (then Publish)
+
+   Note: Google now serves "Source Sans Pro" as "Source Sans 3" (same font,
+   renamed). We load the current name and keep the old name as a fallback.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+/* ---- Body text: Source Sans Pro --------------------------------------- */
+/* Scoped to real text containers so it can't clobber icon fonts
+   (FontAwesome, dashicons) that live on <i>/<span> elements. */
+body,
+input, textarea, select, button,
+p, li, blockquote,
+.entry-content, .site-content, .widget,
+.forminator-custom-form {
+  font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* ---- Headings: Playfair Display --------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.site-title, .site-description,
+.entry-title, .page-title, .widget-title,
+.wp-block-heading,
+.forminator-custom-form .forminator-section-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+}
