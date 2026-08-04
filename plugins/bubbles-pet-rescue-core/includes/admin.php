@@ -107,7 +107,8 @@ function bpr_core_render_pet_metabox($post) {
         <section class="bpr-core-section">
             <h3><?php esc_html_e('Basic Information', 'bubbles-pet-rescue-core'); ?></h3>
             <div class="bpr-core-grid bpr-core-grid-3">
-                <div class="bpr-core-field"><label><?php esc_html_e('Age or Estimated Age', 'bubbles-pet-rescue-core'); ?></label><input class="widefat" type="text" name="bpr_pet[age]" value="<?php echo esc_attr($get('age')); ?>" placeholder="e.g., 2 years"></div>
+                <div class="bpr-core-field"><label><?php esc_html_e('Age', 'bubbles-pet-rescue-core'); ?></label><input class="widefat" type="text" name="bpr_pet[age]" value="<?php echo esc_attr($get('age')); ?>" placeholder="e.g., 1"><span class="description"><?php esc_html_e('Enter just the number (e.g. 1). It shows as “1 year old”.', 'bubbles-pet-rescue-core'); ?></span></div>
+                <div class="bpr-core-field"><label><?php esc_html_e('Age Unit', 'bubbles-pet-rescue-core'); ?></label><?php bpr_core_render_select('age_unit', $get('age_unit') ?: 'years', array('years' => __('Years', 'bubbles-pet-rescue-core'), 'months' => __('Months', 'bubbles-pet-rescue-core'))); ?></div>
                 <div class="bpr-core-field"><label><?php esc_html_e('Age Range', 'bubbles-pet-rescue-core'); ?></label><?php bpr_core_render_select('age_range', $get('age_range'), bpr_core_get_age_range_options()); ?></div>
                 <div class="bpr-core-field"><label><?php esc_html_e('Gender', 'bubbles-pet-rescue-core'); ?></label><?php bpr_core_render_select('gender', $get('gender'), array_merge(array('' => 'Select Gender'), bpr_core_get_gender_options())); ?></div>
                 <div class="bpr-core-field"><label><?php esc_html_e('Size', 'bubbles-pet-rescue-core'); ?></label><?php bpr_core_render_select('size', $get('size'), bpr_core_get_size_options()); ?></div>
@@ -212,7 +213,7 @@ function bpr_core_save_pet($post_id) {
 
     $data = isset($_POST['bpr_pet']) && is_array($_POST['bpr_pet']) ? wp_unslash($_POST['bpr_pet']) : array();
     $text_fields = array(
-        'age', 'age_range', 'gender', 'size', 'weight_kg', 'color', 'coat_length', 'location',
+        'age', 'age_unit', 'age_range', 'gender', 'size', 'weight_kg', 'color', 'coat_length', 'location',
         'energy_level', 'good_with', 'health', 'other_breed'
     );
     $tri_fields = array(

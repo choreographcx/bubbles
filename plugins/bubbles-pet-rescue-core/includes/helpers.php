@@ -111,12 +111,37 @@ function bpr_core_clean_display_value($value) {
 function bpr_core_get_age_display($post_id) {
     $exact = bpr_core_clean_display_value(get_post_meta($post_id, '_bpr_age', true));
     if ($exact) {
-        return $exact;
+        return bpr_core_format_age_value($post_id, $exact);
     }
 
     $range = sanitize_key((string) get_post_meta($post_id, '_bpr_age_range', true));
     $options = bpr_core_get_age_range_options();
     return isset($options[$range]) ? bpr_core_clean_display_value($options[$range]) : '';
+}
+
+/*
+ * Turn a bare number into a friendly age with its unit, e.g. "1 year old" or
+ * "6 months old". The unit comes from the _bpr_age_unit field (default: years).
+ * Values that already contain words (e.g. "2 years", "Puppy") are returned
+ * unchanged, so existing entries are never double-labelled.
+ */
+function bpr_core_format_age_value($post_id, $exact) {
+    $exact = trim((string) $exact);
+    if ($exact === '' || !preg_match('/^\d+(?:\.\d+)?$/', $exact)) {
+        return $exact;
+    }
+
+    $unit = strtolower(trim((string) get_post_meta($post_id, '_bpr_age_unit', true)));
+    $unit = ($unit === 'months') ? 'months' : 'years';
+    $is_one = ((float) $exact === 1.0);
+
+    if ($unit === 'months') {
+        $word = $is_one ? 'month' : 'months';
+    } else {
+        $word = $is_one ? 'year' : 'years';
+    }
+
+    return $exact . ' ' . $word . ' old';
 }
 
 function bpr_core_get_breed_display($post_id) {

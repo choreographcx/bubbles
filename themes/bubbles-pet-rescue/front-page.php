@@ -1,9 +1,28 @@
 <?php get_header(); ?>
+<?php
+// Featured pet used in the hero (right column). Falls back to the logo below.
+$hero_pet_id = bpr_get_home_featured_pet_id();
+$hero_pet = null;
+if ($hero_pet_id) {
+    $hero_pet = array(
+        'name'     => get_the_title($hero_pet_id),
+        'url'      => get_permalink($hero_pet_id),
+        'image_id' => bpr_get_pet_primary_image_id($hero_pet_id),
+        'traits'   => bpr_get_home_featured_pet_traits($hero_pet_id, 3),
+        'statuses' => get_the_terms($hero_pet_id, 'pet_status'),
+        'details'  => array_filter(array(
+            bpr_get_pet_age($hero_pet_id),
+            trim((string) get_post_meta($hero_pet_id, '_bpr_gender', true)),
+            bpr_get_pet_breed($hero_pet_id),
+        )),
+    );
+}
+?>
 <main>
     <section class="bpr-top-wave bpr-hero">
         <div class="container position-relative">
             <div class="row align-items-center g-5">
-                <div class="col-lg-7">
+                <div class="col-lg-4">
                     <span class="bpr-pill mb-3"><i class="bi bi-heart-fill"></i> UAE Pet Rescue</span>
                     <h1 class="display-4 bpr-heading mb-4"><?php echo esc_html(get_theme_mod('bpr_hero_title', 'Helping UAE rescue pets find safe, loving homes')); ?></h1>
                     <p class="bpr-lede mb-4"><?php echo esc_html(get_theme_mod('bpr_hero_text', 'Bubbles Pet Rescue connects dogs and cats with adopters, fosters, and practical support through wishlist items and care supplies.')); ?></p>
@@ -12,8 +31,43 @@
                         <a class="btn btn-bpr-secondary" href="<?php echo esc_url(home_url('/cats/')); ?>">Meet the Cats</a>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="bpr-card p-4 text-center"><img class="img-fluid rounded-4" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo.png'); ?>" alt="Bubbles Pet Rescue Logo"></div>
+                <div class="col-lg-8">
+                    <?php if ($hero_pet) : ?>
+                        <div class="bpr-card bpr-hero-featured p-3 p-md-4">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-sm-5">
+                                    <a class="bpr-home-featured-image-link" href="<?php echo esc_url($hero_pet['url']); ?>" aria-label="Meet <?php echo esc_attr($hero_pet['name']); ?>">
+                                        <?php if ($hero_pet['image_id']) : ?>
+                                            <?php echo wp_get_attachment_image($hero_pet['image_id'], 'large', false, array('class' => 'bpr-home-featured-image', 'loading' => 'eager', 'sizes' => '(max-width: 767px) calc(100vw - 3rem), (max-width: 991px) 40vw, 320px')); ?>
+                                        <?php else : ?>
+                                            <span class="bpr-home-featured-image bpr-home-featured-placeholder"><i class="bi bi-heart-pulse" aria-hidden="true"></i></span>
+                                        <?php endif; ?>
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="bpr-home-featured-pet text-center text-sm-start">
+                                        <?php if ($hero_pet['statuses'] && !is_wp_error($hero_pet['statuses'])) : ?>
+                                            <div class="bpr-home-featured-statuses justify-content-center justify-content-sm-start">
+                                                <?php foreach ($hero_pet['statuses'] as $status) : ?>
+                                                    <span><?php echo esc_html($status->name); ?></span>
+                                                <?php endforeach; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <h2 class="bpr-script-heading bpr-home-featured-name">Meet <?php echo esc_html($hero_pet['name']); ?>!</h2>
+                                        <?php if ($hero_pet['details']) : ?><p class="bpr-home-featured-details"><?php echo esc_html(implode(' • ', $hero_pet['details'])); ?></p><?php endif; ?>
+                                        <?php if ($hero_pet['traits']) : ?>
+                                            <div class="bpr-home-featured-traits justify-content-center justify-content-sm-start">
+                                                <?php foreach ($hero_pet['traits'] as $trait) : ?><span><?php echo esc_html($trait); ?></span><?php endforeach; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <a class="btn btn-bpr-primary bpr-home-featured-button" href="<?php echo esc_url($hero_pet['url']); ?>">Learn More About <?php echo esc_html($hero_pet['name']); ?></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <div class="bpr-card p-4 text-center"><img class="img-fluid rounded-4" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo.png'); ?>" alt="Bubbles Pet Rescue Logo"></div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

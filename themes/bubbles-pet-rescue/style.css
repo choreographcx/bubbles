@@ -1298,3 +1298,20 @@ iframe {
   }
 }
 
+
+/* Hero featured pet card (homepage hero right column) */
+.bpr-hero-featured {
+  text-align: left;
+}
+.bpr-hero-featured .bpr-home-featured-name {
+  margin-top: 0.35rem;
+}
+.bpr-hero-featured .bpr-home-featured-button {
+  margin-top: 0.85rem;
+}
+@media (max-width: 575.98px) {
+  .bpr-hero-featured .col-sm-5 {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+}
