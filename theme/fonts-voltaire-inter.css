@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Bubbles Pet Rescue — Google Fonts
+   Headings: Voltaire   |   Body: Inter
+   Paste this into: Appearance > Customize > Additional CSS  (then Publish)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Voltaire&display=swap');
+
+/* ---- Body text: Inter -------------------------------------------------- */
+/* Kept to real text containers so it can't clobber icon fonts (FontAwesome,
+   dashicons) that live on <i>/<span> elements. */
+body,
+input, textarea, select, button,
+p, li, blockquote,
+.entry-content, .site-content, .widget,
+.forminator-custom-form {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* ---- Headings: Voltaire ----------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.site-title, .site-description,
+.entry-title, .page-title, .widget-title,
+.wp-block-heading,
+.forminator-custom-form .forminator-section-title {
+  font-family: 'Voltaire', 'Inter', sans-serif !important;
+  font-weight: 400 !important;   /* Voltaire only has a regular weight */
+}
