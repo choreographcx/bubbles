@@ -1,0 +1,16 @@
+<?php get_header(); ?>
+<main class="bpr-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <?php while (have_posts()) : the_post(); ?>
+                    <article <?php post_class('bpr-card p-4 p-lg-5'); ?>>
+                        <h1 class="bpr-section-title mb-4"><?php the_title(); ?></h1>
+                        <div class="entry-content"><?php the_content(); ?></div>
+                    </article>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </div>
+</main>
+<?php get_footer(); ?>

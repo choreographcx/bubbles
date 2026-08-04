@@ -1,0 +1,236 @@
+/* Mobile layout hardening: prevent intrinsic pet images from widening the page. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+body,
+.bpr-navbar,
+main,
+section,
+.bpr-footer {
+  width: 100%;
+}
+
+img,
+picture,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.container,
+.container-fluid,
+.row,
+.row > * {
+  min-width: 0;
+}
+
+.custom-logo-link {
+  display: inline-flex;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.custom-logo,
+.bpr-logo {
+  height: auto;
+  max-width: 100%;
+}
+
+/* The frame, rather than the attachment, owns the square dimensions. */
+.bpr-home-featured-image-link,
+.bpr-dog-directory-image-link {
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  position: relative;
+}
+
+.bpr-home-featured-image,
+.bpr-dog-directory-image {
+  height: 100% !important;
+  inset: 0;
+  max-height: none !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  position: absolute;
+  width: 100% !important;
+}
+
+.bpr-profile-carousel,
+.bpr-profile-carousel .carousel-inner,
+.bpr-profile-carousel .carousel-item,
+.bpr-profile-carousel .bpr-gallery-open {
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+}
+
+.bpr-profile-carousel .carousel-inner {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  position: relative;
+}
+
+.bpr-profile-carousel .carousel-item,
+.bpr-profile-carousel .bpr-gallery-open {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.bpr-profile-carousel-image {
+  height: 100% !important;
+  inset: 0;
+  max-height: none !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  position: absolute;
+  width: 100% !important;
+}
+
+.bpr-profile-summary,
+.bpr-profile-facts,
+.bpr-profile-story,
+.bpr-home-featured-pet,
+.bpr-home-rescue-copy,
+.bpr-dog-directory-body {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767.98px) {
+  .bpr-navbar .container,
+  .bpr-hero .container,
+  .bpr-home-actions .container,
+  .bpr-home-featured-section .container,
+  .bpr-dog-archive .container,
+  .bpr-single-profile .container,
+  .bpr-footer .container {
+    max-width: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  .bpr-hero .row,
+  .bpr-home-actions .row,
+  .bpr-home-featured-section .row,
+  .bpr-dog-card-grid,
+  .bpr-profile-layout > .row {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .bpr-hero .row > *,
+  .bpr-home-actions .row > *,
+  .bpr-home-featured-section .row > *,
+  .bpr-dog-card-grid > *,
+  .bpr-profile-layout > .row > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .bpr-home-actions .row,
+  .bpr-home-featured-section .row,
+  .bpr-dog-card-grid,
+  .bpr-profile-layout > .row {
+    gap: 1.5rem;
+  }
+
+  .bpr-home-featured-image-link,
+  .bpr-home-featured-pet,
+  .bpr-dog-directory-card,
+  .bpr-profile-media-sticky,
+  .bpr-profile-carousel,
+  .bpr-profile-summary,
+  .bpr-profile-facts {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30rem;
+    width: 100%;
+  }
+
+  .bpr-dog-directory-card {
+    max-width: 22rem;
+  }
+
+  .bpr-home-featured-image-link,
+  .bpr-profile-carousel {
+    max-width: 26rem;
+  }
+
+  .bpr-home-featured-section,
+  .bpr-single-profile,
+  .bpr-dog-archive {
+    overflow-x: clip;
+  }
+
+  .bpr-home-featured-name,
+  .bpr-profile-title,
+  .bpr-dog-archive .bpr-script-heading {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    max-width: calc(100% - 3.75rem);
+    min-width: 0;
+  }
+
+  .navbar-brand .custom-logo,
+  .navbar-brand .bpr-logo {
+    max-height: 44px;
+    width: auto;
+  }
+
+  .bpr-hero {
+    padding-bottom: 2.5rem;
+    padding-top: 2.75rem;
+  }
+
+  .bpr-heading {
+    font-size: clamp(2rem, 10vw, 2.55rem);
+  }
+
+  .bpr-lede {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .bpr-home-featured-section {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  .bpr-home-featured-name,
+  .bpr-profile-title {
+    font-size: clamp(2.45rem, 13vw, 3.15rem);
+  }
+
+  .bpr-profile-facts dl > div {
+    align-items: flex-start;
+    display: grid;
+    gap: 0.15rem;
+    grid-template-columns: 1fr;
+    padding: 0.35rem 0;
+  }
+
+  .bpr-profile-facts dd {
+    padding-left: 1.45rem;
+  }
+}
+

@@ -1,0 +1,8 @@
+# caches, temp, backups, media — keep these OUT of git
+cache/
+ai1wm-backups/
+upgrade/
+wp-rocket-config/
+uploads/
+*.log
+.DS_Store
