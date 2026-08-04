@@ -1,0 +1,12 @@
+---
+# cPanel deployment for the Bubbles Pet Rescue site.
+#
+# When you click "Deploy HEAD Commit" in cPanel > Git Version Control, cPanel
+# runs the tasks below. They copy ONLY the custom theme and custom plugin into
+# the live wp-content folder — third-party plugins and uploads are never
+# touched, so nothing gets accidentally overwritten or downgraded.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/bubblespetrescue/public_html/wp-content
+    - /bin/cp -R themes/bubbles-pet-rescue "$DEPLOYPATH/themes/"
+    - /bin/cp -R plugins/bubbles-pet-rescue-core "$DEPLOYPATH/plugins/"
