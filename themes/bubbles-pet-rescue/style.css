@@ -1545,11 +1545,17 @@ iframe {
   text-decoration: none;
 }
 
-/* Center the icon glyphs inside the social circles (bootstrap-icons ships a
-   -0.125em baseline offset that otherwise pushes them low) */
+/* Center the icon glyphs inside the social circles: kill the inline
+   line-box entirely so flexbox centers the bare glyph box */
+.bpr-social-links a {
+  line-height: 0;
+}
 .bpr-social-links a i {
+  display: block;
+  height: 1em;
   line-height: 1;
 }
 .bpr-social-links a i::before {
+  display: block;
   vertical-align: 0;
 }
