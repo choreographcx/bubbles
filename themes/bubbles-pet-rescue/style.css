@@ -1468,9 +1468,11 @@ iframe {
 }
 
 /* Footer columns */
-.bpr-footer-logo {
-  height: 64px;
+.bpr-footer-brand {
   margin-bottom: 0.9rem;
+}
+.bpr-footer-logo {
+  height: 56px;
   width: auto;
 }
 .bpr-footer-wordmark {
