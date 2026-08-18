@@ -42,7 +42,6 @@ $bpr_email     = get_theme_mod('bpr_contact_email') ?: 'LittleAngelsUAE@outlook.
                     <?php if ($bpr_tiktok) : ?>
                         <a href="<?php echo esc_url($bpr_tiktok); ?>" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
                     <?php endif; ?>
-                    <a href="<?php echo esc_url($bpr_whatsapp); ?>" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

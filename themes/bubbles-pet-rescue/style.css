@@ -1544,3 +1544,12 @@ iframe {
   color: var(--bpr-deep-blue);
   text-decoration: none;
 }
+
+/* Center the icon glyphs inside the social circles (bootstrap-icons ships a
+   -0.125em baseline offset that otherwise pushes them low) */
+.bpr-social-links a i {
+  line-height: 1;
+}
+.bpr-social-links a i::before {
+  vertical-align: 0;
+}
