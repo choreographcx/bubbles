@@ -27,8 +27,8 @@ if ($hero_pet_id) {
                     <h1 class="display-4 bpr-heading mb-4"><?php echo esc_html(get_theme_mod('bpr_hero_title', 'Helping UAE rescue pets find safe, loving homes')); ?></h1>
                     <p class="bpr-lede mb-4"><?php echo esc_html(get_theme_mod('bpr_hero_text', 'Bubbles Pets Rescue connects dogs and cats with adopters, fosters, and practical support through wishlist items and care supplies.')); ?></p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a class="btn btn-bpr-primary" href="<?php echo esc_url(home_url('/dogs/')); ?>">Meet the Dogs</a>
-                        <a class="btn btn-bpr-secondary" href="<?php echo esc_url(home_url('/cats/')); ?>">Meet the Cats</a>
+                        <a class="btn btn-bpr-primary" href="<?php echo esc_url(home_url('/meet-the-animals/')); ?>">Meet the Animals</a>
+                        <a class="btn btn-bpr-secondary" href="<?php echo esc_url(home_url('/ways-to-help/')); ?>">Ways to Help</a>
                     </div>
                 </div>
                 <div class="col-lg-6">

@@ -139,9 +139,6 @@
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url(home_url('/adoption-application/')); ?>">Start an Adoption Application</a></div>
 <!-- /wp:button -->
 <!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url(home_url('/dogs/')); ?>">Meet the Dogs</a></div>
-<!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url(home_url('/cats/')); ?>">Meet the Cats</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url(home_url('/meet-the-animals/')); ?>">Meet the Animals</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
