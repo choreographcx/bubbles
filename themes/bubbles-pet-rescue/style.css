@@ -1475,10 +1475,10 @@ iframe {
 }
 .bpr-footer-wordmark {
   color: var(--bpr-white);
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1.35;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
   margin-bottom: 0.9rem;
   text-transform: uppercase;
 }
