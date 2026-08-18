@@ -1644,3 +1644,15 @@ iframe {
   border-color: var(--bpr-blue);
   color: var(--bpr-white);
 }
+
+/* Wider page container on big screens (Bootstrap defaults: 1140/1320). */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
