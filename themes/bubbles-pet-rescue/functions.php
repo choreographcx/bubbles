@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_THEME_VERSION', '1.2.8');
+define('BPR_THEME_VERSION', '1.2.9');
 
 function bpr_theme_setup() {
     load_theme_textdomain('bubbles-pet-rescue', get_template_directory() . '/languages');

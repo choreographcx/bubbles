@@ -12,7 +12,6 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-3" href="<?php echo esc_url(home_url('/')); ?>">
                 <?php if (has_custom_logo()) { the_custom_logo(); } else { ?><img class="bpr-logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo.png'); ?>" alt="<?php bloginfo('name'); ?>"><?php } ?>
-                <span class="d-none d-sm-inline"><?php bloginfo('name'); ?></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bprMenu" aria-controls="bprMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="bprMenu">

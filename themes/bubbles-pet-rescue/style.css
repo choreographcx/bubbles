@@ -1359,3 +1359,52 @@ iframe {
   gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
+
+/* Header menu: nested items become hover dropdowns */
+.bpr-navbar .navbar-nav .nav-item { position: relative; }
+.bpr-navbar .navbar-nav .menu-item-has-children > .nav-link::after {
+  content: "\25BE";
+  font-size: 0.75em;
+  margin-left: 0.3rem;
+  opacity: 0.65;
+}
+.bpr-navbar .navbar-nav .sub-menu {
+  background: var(--bpr-white);
+  border: 1px solid rgba(23, 103, 161, 0.12);
+  border-radius: 0.9rem;
+  box-shadow: 0 0.75rem 2rem rgba(15, 72, 111, 0.16);
+  display: none;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  min-width: 230px;
+  padding: 0.5rem;
+  position: absolute;
+  top: 100%;
+  z-index: 1030;
+}
+.bpr-navbar .navbar-nav .nav-item:hover > .sub-menu,
+.bpr-navbar .navbar-nav .nav-item:focus-within > .sub-menu {
+  display: block;
+}
+.bpr-navbar .navbar-nav .sub-menu .nav-link {
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+.bpr-navbar .navbar-nav .sub-menu .nav-link:hover {
+  background: var(--bpr-sky);
+  color: var(--bpr-deep-blue);
+}
+@media (max-width: 991.98px) {
+  /* In the collapsed mobile menu, show nested items inline and indented */
+  .bpr-navbar .navbar-nav .sub-menu {
+    border: 0;
+    box-shadow: none;
+    display: block;
+    min-width: 0;
+    padding: 0 0 0 1.1rem;
+    position: static;
+  }
+  .bpr-navbar .navbar-nav .menu-item-has-children > .nav-link::after { content: ""; }
+}
