@@ -216,11 +216,11 @@ function bpr_customize_register($wp_customize) {
 
     $settings = array(
         'bpr_amazon_wishlist_url' => array('Amazon Wishlist URL', 'https://www.amazon.ae/hz/wishlist/ls/1TTLP5QW4EVHM'),
-        'bpr_instagram_url' => array('Instagram URL', ''),
-        'bpr_facebook_url' => array('Facebook URL', ''),
+        'bpr_instagram_url' => array('Instagram URL', 'https://www.instagram.com/bubbles.petsrescue/'),
+        'bpr_facebook_url' => array('Facebook URL', 'https://www.facebook.com/Bubbles.petsrescue'),
         'bpr_tiktok_url' => array('TikTok URL', ''),
-        'bpr_whatsapp_url' => array('WhatsApp URL', ''),
-        'bpr_contact_email' => array('Contact Email', get_option('admin_email')),
+        'bpr_whatsapp_url' => array('WhatsApp URL', 'https://wa.me/971508083083'),
+        'bpr_contact_email' => array('Contact Email', 'LittleAngelsUAE@outlook.com'),
         'bpr_hero_title' => array('Hero Title', 'Helping UAE rescue pets find safe, loving homes'),
         'bpr_hero_text' => array('Hero Text', 'Bubbles Pets Rescue connects dogs and cats with adopters, fosters, and practical support through wishlist items and care supplies.'),
         'bpr_home_intro_title' => array('Homepage Rescue Heading', 'Bubbles Pets Rescue'),

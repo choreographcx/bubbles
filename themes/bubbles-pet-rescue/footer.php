@@ -1,4 +1,13 @@
 <?php if (!defined('ABSPATH')) { exit; } ?>
+<?php
+// Contact details shown in the footer. Customizer values win; the rescue's
+// known accounts (matching the Contact page) are the fallbacks.
+$bpr_instagram = get_theme_mod('bpr_instagram_url') ?: 'https://www.instagram.com/bubbles.petsrescue/';
+$bpr_facebook  = get_theme_mod('bpr_facebook_url') ?: 'https://www.facebook.com/Bubbles.petsrescue';
+$bpr_tiktok    = get_theme_mod('bpr_tiktok_url');
+$bpr_whatsapp  = get_theme_mod('bpr_whatsapp_url') ?: 'https://wa.me/971508083083';
+$bpr_email     = get_theme_mod('bpr_contact_email') ?: 'LittleAngelsUAE@outlook.com';
+?>
 <footer class="bpr-footer mt-5">
     <div class="container">
         <div class="row g-4 g-lg-5 align-items-start">
@@ -17,13 +26,8 @@
                 <h3 class="bpr-footer-heading"><?php esc_html_e('Contact Us', 'bubbles-pet-rescue'); ?></h3>
                 <div class="bpr-footer-contact">
                     <div><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Dubai, United Arab Emirates</span></div>
-                    <?php $contact_email = get_theme_mod('bpr_contact_email', get_option('admin_email')); ?>
-                    <?php if ($contact_email) : ?>
-                        <div><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:<?php echo esc_attr($contact_email); ?>"><?php echo esc_html($contact_email); ?></a></div>
-                    <?php endif; ?>
-                    <?php if ($url = get_theme_mod('bpr_whatsapp_url')) : ?>
-                        <div><i class="bi bi-whatsapp" aria-hidden="true"></i><a href="<?php echo esc_url($url); ?>">WhatsApp us</a></div>
-                    <?php endif; ?>
+                    <div><i class="bi bi-whatsapp" aria-hidden="true"></i><a href="<?php echo esc_url($bpr_whatsapp); ?>">+971 50 808 3083</a></div>
+                    <div><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:<?php echo esc_attr($bpr_email); ?>"><?php echo esc_html($bpr_email); ?></a></div>
                     <?php if ($wishlist = get_theme_mod('bpr_amazon_wishlist_url')) : ?>
                         <div><i class="bi bi-gift-fill" aria-hidden="true"></i><a href="<?php echo esc_url($wishlist); ?>">Amazon Wishlist</a></div>
                     <?php endif; ?>
@@ -33,18 +37,12 @@
             <div class="col-lg-2">
                 <h3 class="bpr-footer-heading"><?php esc_html_e('Follow Us', 'bubbles-pet-rescue'); ?></h3>
                 <div class="bpr-social-links">
-                    <?php if ($url = get_theme_mod('bpr_instagram_url')) : ?>
-                        <a href="<?php echo esc_url($url); ?>" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    <a href="<?php echo esc_url($bpr_instagram); ?>" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    <a href="<?php echo esc_url($bpr_facebook); ?>" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    <?php if ($bpr_tiktok) : ?>
+                        <a href="<?php echo esc_url($bpr_tiktok); ?>" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
                     <?php endif; ?>
-                    <?php if ($url = get_theme_mod('bpr_facebook_url')) : ?>
-                        <a href="<?php echo esc_url($url); ?>" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                    <?php endif; ?>
-                    <?php if ($url = get_theme_mod('bpr_tiktok_url')) : ?>
-                        <a href="<?php echo esc_url($url); ?>" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
-                    <?php endif; ?>
-                    <?php if ($url = get_theme_mod('bpr_whatsapp_url')) : ?>
-                        <a href="<?php echo esc_url($url); ?>" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
-                    <?php endif; ?>
+                    <a href="<?php echo esc_url($bpr_whatsapp); ?>" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
