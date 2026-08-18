@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_THEME_VERSION', '1.3.3');
+define('BPR_THEME_VERSION', '1.3.4');
 
 function bpr_theme_setup() {
     load_theme_textdomain('bubbles-pet-rescue', get_template_directory() . '/languages');
@@ -64,6 +64,21 @@ function bpr_enqueue_assets() {
     wp_enqueue_script('bpr-site', get_template_directory_uri() . '/assets/js/bpr-site.js', array(), BPR_THEME_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'bpr_enqueue_assets');
+
+/*
+ * SVG favicon fallback. If a Site Icon is set in the Customizer (Site
+ * Identity), WordPress prints its own icon tags and this stays out of the way.
+ */
+function bpr_svg_favicon() {
+    if (has_site_icon()) {
+        return;
+    }
+    printf(
+        '<link rel="icon" href="%s" type="image/svg+xml">' . "\n",
+        esc_url(get_template_directory_uri() . '/assets/img/bubbles-mark.svg?ver=' . BPR_THEME_VERSION)
+    );
+}
+add_action('wp_head', 'bpr_svg_favicon', 2);
 
 /*
  * Compatibility fallback for sites where the companion Bubbles Pets Rescue Core
