@@ -40,9 +40,16 @@ a:hover { color: var(--bpr-deep-blue); }
 }
 
 .bpr-navbar {
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 0.5rem 1.5rem rgba(15, 72, 111, 0.08);
+}
+/* Blur only on desktop: backdrop-filter would make the header the containing
+   block for the fixed-position mobile offcanvas, clipping it to the bar. */
+@media (min-width: 992px) {
+  .bpr-navbar {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+  }
 }
 
 .bpr-logo {
@@ -1426,11 +1433,31 @@ iframe {
 /* Mobile menu: full-height panel sliding in from the right */
 @media (max-width: 991.98px) {
   .bpr-offcanvas.offcanvas-lg {
-    width: min(20rem, 86vw);
+    width: min(21rem, 88vw);
   }
   .bpr-offcanvas {
     background: linear-gradient(180deg, var(--bpr-white), var(--bpr-sky));
-    border-left: 1px solid rgba(23, 103, 161, 0.12);
+    border-left: 0;
+    border-radius: 1.1rem 0 0 1.1rem;
+    box-shadow: -0.75rem 0 2.5rem rgba(15, 72, 111, 0.2);
+    height: 100dvh;
+  }
+  .bpr-offcanvas .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .bpr-offcanvas-footer {
+    margin-top: auto;
+    padding-top: 1.75rem;
+  }
+  .bpr-offcanvas .bpr-social-links a {
+    border-color: rgba(23, 103, 161, 0.3);
+    color: var(--bpr-blue);
+  }
+  .bpr-offcanvas .bpr-social-links a:hover {
+    background: var(--bpr-sky);
+    color: var(--bpr-deep-blue);
   }
   .bpr-offcanvas .offcanvas-header {
     border-bottom: 1px solid rgba(23, 103, 161, 0.12);

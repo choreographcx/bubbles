@@ -18,11 +18,22 @@
             <button class="navbar-toggler bpr-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bprMenu" aria-controls="bprMenu" aria-expanded="false" aria-label="<?php esc_attr_e('Open menu', 'bubbles-pet-rescue'); ?>"><span class="bpr-burger" aria-hidden="true"><span></span><span></span><span></span></span></button>
             <div class="offcanvas-lg offcanvas-end bpr-offcanvas" tabindex="-1" id="bprMenu" aria-labelledby="bprMenuLabel">
                 <div class="offcanvas-header">
-                    <span class="offcanvas-title bpr-section-title h5 mb-0" id="bprMenuLabel"><?php esc_html_e('Menu', 'bubbles-pet-rescue'); ?></span>
+                    <span class="d-flex align-items-center gap-2" id="bprMenuLabel">
+                        <img class="bpr-brand-mark" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-mark.svg?ver=' . BPR_THEME_VERSION); ?>" alt="" style="height: 38px; width: auto;">
+                        <span class="bpr-brand-wordmark" aria-hidden="true">Bubbles.Pets<br>Rescue</span>
+                        <span class="visually-hidden"><?php esc_html_e('Menu', 'bubbles-pet-rescue'); ?></span>
+                    </span>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#bprMenu" aria-label="<?php esc_attr_e('Close', 'bubbles-pet-rescue'); ?>"></button>
                 </div>
                 <div class="offcanvas-body">
                     <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'navbar-nav ms-auto align-items-lg-center gap-lg-2', 'fallback_cb' => 'bpr_default_menu', 'depth' => 2)); ?>
+                    <div class="bpr-offcanvas-footer d-lg-none">
+                        <a class="btn btn-bpr-primary w-100 mb-3" href="<?php echo esc_url(get_theme_mod('bpr_whatsapp_url') ?: 'https://wa.me/971508083083'); ?>"><i class="bi bi-whatsapp me-2" aria-hidden="true"></i><?php esc_html_e('WhatsApp Us', 'bubbles-pet-rescue'); ?></a>
+                        <div class="bpr-social-links justify-content-center">
+                            <a href="<?php echo esc_url(get_theme_mod('bpr_instagram_url') ?: 'https://www.instagram.com/bubbles.petsrescue/'); ?>" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                            <a href="<?php echo esc_url(get_theme_mod('bpr_facebook_url') ?: 'https://www.facebook.com/Bubbles.petsrescue'); ?>" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
