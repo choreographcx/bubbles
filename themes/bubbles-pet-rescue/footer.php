@@ -25,7 +25,6 @@ $bpr_email     = get_theme_mod('bpr_contact_email') ?: 'LittleAngelsUAE@outlook.
             <div class="col-6 col-lg-3">
                 <h3 class="bpr-footer-heading"><?php esc_html_e('Contact Us', 'bubbles-pet-rescue'); ?></h3>
                 <div class="bpr-footer-contact">
-                    <div><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Dubai, United Arab Emirates</span></div>
                     <div><i class="bi bi-whatsapp" aria-hidden="true"></i><a href="<?php echo esc_url($bpr_whatsapp); ?>">+971 50 808 3083</a></div>
                     <div><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:<?php echo esc_attr($bpr_email); ?>"><?php echo esc_html($bpr_email); ?></a></div>
                     <?php if ($wishlist = get_theme_mod('bpr_amazon_wishlist_url')) : ?>
