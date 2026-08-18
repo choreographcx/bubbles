@@ -12,7 +12,7 @@ $bpr_email     = get_theme_mod('bpr_contact_email') ?: 'LittleAngelsUAE@outlook.
     <div class="container">
         <div class="row g-4 g-lg-5 align-items-start">
             <div class="col-lg-4">
-                <img class="bpr-footer-logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo-white.svg'); ?>" alt="">
+                <img class="bpr-footer-logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo-white.svg?ver=' . BPR_THEME_VERSION); ?>" alt="">
                 <p class="bpr-footer-wordmark">Bubbles.Pets<br>Rescue</p>
                 <p class="mb-0">Dedicated to rescuing, rehabilitating, and rehoming stray and abandoned pets across the United Arab Emirates.</p>
             </div>
