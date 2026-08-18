@@ -694,6 +694,20 @@ function bpr_core_render_applications_page() {
         wp_die(esc_html__('You do not have permission to access this page.', 'bubbles-pet-rescue-core'));
     }
 
+    echo '<style>
+        .bpr-apps-table-wrap { overflow-x: auto; }
+        @media screen and (max-width: 782px) {
+            .bpr-apps-table thead { display: none; }
+            .bpr-apps-table, .bpr-apps-table tbody, .bpr-apps-table tr, .bpr-apps-table td { display: block; width: auto !important; }
+            .bpr-apps-table tr { border: 1px solid #dcdcde; border-radius: 6px; margin: 0 0 12px; background: #fff; padding: 6px 0; }
+            .bpr-apps-table td { display: flex; gap: 10px; padding: 5px 12px !important; border: 0 !important; word-break: break-word; }
+            .bpr-apps-table td::before { content: attr(data-label); flex: 0 0 72px; font-weight: 600; color: #50575e; }
+            .bpr-apps-detail-table td { display: block; width: auto !important; word-break: break-word; }
+            .bpr-apps-detail-table td:first-child { padding-bottom: 0; }
+            .bpr-apps-detail-table img { max-width: 100% !important; height: auto; }
+        }
+    </style>';
+
     echo '<div class="wrap"><h1>' . esc_html__('Applications & Messages', 'bubbles-pet-rescue-core') . '</h1>';
 
     if (!bpr_core_forminator_tables_exist()) {
@@ -735,7 +749,7 @@ function bpr_core_render_applications_page() {
 
         $page_items = array_slice($items, $pagination['offset'], $pagination['length']);
 
-        echo '<table class="widefat striped"><thead><tr>'
+        echo '<div class="bpr-apps-table-wrap"><table class="widefat striped bpr-apps-table"><thead><tr>'
             . '<th style="width:120px;">' . esc_html__('Date', 'bubbles-pet-rescue-core') . '</th>'
             . '<th style="width:300px;">' . esc_html__('From', 'bubbles-pet-rescue-core') . '</th>'
             . '<th style="width:200px;">' . esc_html__('Pet(s)', 'bubbles-pet-rescue-core') . '</th>'
@@ -768,17 +782,17 @@ function bpr_core_render_applications_page() {
             $notes_short = ($notes !== '') ? mb_strimwidth($notes, 0, 60, '…') : '—';
 
             echo '<tr>'
-                . '<td>' . esc_html($row['date']) . '</td>'
-                . '<td>' . esc_html($row['from']) . '</td>'
-                . '<td>' . esc_html($row['pets'] !== '' ? $row['pets'] : '—') . '</td>'
-                . '<td>' . esc_html($row['origin']) . '</td>'
-                . '<td>' . esc_html($status) . '</td>'
-                . '<td>' . esc_html($notes_short) . '</td>'
-                . '<td><a href="' . esc_url($view_url) . '">' . esc_html__('View', 'bubbles-pet-rescue-core') . '</a></td>'
+                . '<td data-label="' . esc_attr__('Date', 'bubbles-pet-rescue-core') . '">' . esc_html($row['date']) . '</td>'
+                . '<td data-label="' . esc_attr__('From', 'bubbles-pet-rescue-core') . '">' . esc_html($row['from']) . '</td>'
+                . '<td data-label="' . esc_attr__('Pet(s)', 'bubbles-pet-rescue-core') . '">' . esc_html($row['pets'] !== '' ? $row['pets'] : '—') . '</td>'
+                . '<td data-label="' . esc_attr__('Form', 'bubbles-pet-rescue-core') . '">' . esc_html($row['origin']) . '</td>'
+                . '<td data-label="' . esc_attr__('Status', 'bubbles-pet-rescue-core') . '">' . esc_html($status) . '</td>'
+                . '<td data-label="' . esc_attr__('Notes', 'bubbles-pet-rescue-core') . '">' . esc_html($notes_short) . '</td>'
+                . '<td data-label="' . esc_attr__('View', 'bubbles-pet-rescue-core') . '"><a href="' . esc_url($view_url) . '">' . esc_html__('View', 'bubbles-pet-rescue-core') . '</a></td>'
                 . '</tr>';
         }
 
-        echo '</tbody></table>';
+        echo '</tbody></table></div>';
     }
 
     echo '</div>';
@@ -897,7 +911,7 @@ function bpr_core_render_forminator_entry_view($form_id, $entry_id) {
 
     $labels = bpr_core_forminator_field_labels($form_id);
 
-    echo '<table class="widefat striped" style="margin-top:1rem;">';
+    echo '<table class="widefat striped bpr-apps-detail-table" style="margin-top:1rem;">';
     echo '<thead><tr><th style="width:340px;">' . esc_html__('Field', 'bubbles-pet-rescue-core') . '</th><th>' . esc_html__('Value', 'bubbles-pet-rescue-core') . '</th></tr></thead><tbody>';
 
     foreach ($entry['meta'] as $key => $value) {
