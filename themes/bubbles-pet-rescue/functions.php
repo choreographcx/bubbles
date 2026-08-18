@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_THEME_VERSION', '1.2.6');
+define('BPR_THEME_VERSION', '1.2.7');
 
 function bpr_theme_setup() {
     load_theme_textdomain('bubbles-pet-rescue', get_template_directory() . '/languages');
@@ -18,6 +18,16 @@ function bpr_theme_setup() {
     ));
 }
 add_action('after_setup_theme', 'bpr_theme_setup');
+
+// Category for the starter page patterns in /patterns (files auto-register).
+function bpr_register_pattern_category() {
+    if (function_exists('register_block_pattern_category')) {
+        register_block_pattern_category('bubbles-pet-rescue', array(
+            'label' => __('Bubbles Pet Rescue', 'bubbles-pet-rescue'),
+        ));
+    }
+}
+add_action('init', 'bpr_register_pattern_category');
 
 function bpr_enqueue_assets() {
     wp_enqueue_style('bpr-fonts', 'https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap', array(), null);

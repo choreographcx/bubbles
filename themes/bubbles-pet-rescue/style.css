@@ -1313,3 +1313,49 @@ iframe {
     margin-inline: auto;
   }
 }
+
+/* Block-editor content styling for pages built from the starter patterns */
+.entry-content .wp-block-button__link {
+  background: var(--bpr-blue);
+  border: 2px solid var(--bpr-blue);
+  border-radius: 999px;
+  color: var(--bpr-white);
+  font-weight: 800;
+  padding: 0.8rem 1.35rem;
+  text-decoration: none;
+}
+.entry-content .wp-block-button__link:hover {
+  background: var(--bpr-deep-blue);
+  border-color: var(--bpr-deep-blue);
+  color: var(--bpr-white);
+}
+.entry-content .is-style-outline .wp-block-button__link {
+  background: transparent;
+  color: var(--bpr-blue);
+}
+.entry-content .is-style-outline .wp-block-button__link:hover {
+  background: var(--bpr-sky);
+  color: var(--bpr-deep-blue);
+}
+.entry-content .wp-block-details {
+  background: rgba(216, 238, 247, 0.35);
+  border: 1px solid rgba(23, 103, 161, 0.11);
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+.entry-content .wp-block-details summary {
+  color: var(--bpr-deep-blue);
+  cursor: pointer;
+  font-weight: 750;
+}
+.entry-content .wp-block-details[open] summary {
+  margin-bottom: 0.5rem;
+}
+.entry-content p.bpr-pill {
+  margin-bottom: 1rem;
+}
+.entry-content .wp-block-columns {
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
