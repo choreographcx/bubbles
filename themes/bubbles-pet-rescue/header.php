@@ -7,6 +7,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<a class="bpr-skip-link" href="#bpr-main"><?php esc_html_e('Skip to content', 'bubbles-pet-rescue'); ?></a>
 <header class="bpr-navbar sticky-top">
     <nav class="navbar navbar-expand-lg py-3">
         <div class="container">

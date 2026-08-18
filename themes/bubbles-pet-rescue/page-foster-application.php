@@ -1,7 +1,7 @@
 <?php
 /* Template Name: Foster Application */
 get_header(); ?>
-<main class="bpr-section">
+<main id="bpr-main" class="bpr-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">

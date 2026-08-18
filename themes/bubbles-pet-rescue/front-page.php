@@ -18,7 +18,7 @@ if ($hero_pet_id) {
     );
 }
 ?>
-<main>
+<main id="bpr-main">
     <section class="bpr-top-wave bpr-hero">
         <div class="container position-relative">
             <div class="row align-items-center g-5">

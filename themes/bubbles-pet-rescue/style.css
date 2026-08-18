@@ -1607,3 +1607,22 @@ iframe {
     font-size: 1rem;
   }
 }
+
+/* Skip link: hidden until focused, for keyboard and screen-reader users. */
+.bpr-skip-link {
+  background: var(--bpr-deep-blue);
+  border-radius: 0 0 0.6rem 0;
+  color: var(--bpr-white);
+  font-weight: 800;
+  left: 0;
+  padding: 0.7rem 1.1rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(-120%);
+  z-index: 2000;
+}
+.bpr-skip-link:focus {
+  color: var(--bpr-white);
+  outline: 3px solid var(--bpr-aqua);
+  transform: none;
+}

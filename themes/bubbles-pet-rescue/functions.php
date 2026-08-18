@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_THEME_VERSION', '1.4.1');
+define('BPR_THEME_VERSION', '1.4.2');
 
 function bpr_theme_setup() {
     load_theme_textdomain('bubbles-pet-rescue', get_template_directory() . '/languages');
@@ -25,11 +25,12 @@ add_action('after_setup_theme', 'bpr_theme_setup');
 // Default footer menus, shown until real menus are assigned to the footer
 // locations in Appearance > Menus.
 function bpr_footer_menu_get_involved() {
+    $wishlist = get_theme_mod('bpr_amazon_wishlist_url') ?: home_url('/wishlist/');
     echo '<ul class="list-unstyled mb-0 bpr-footer-menu">'
         . '<li><a href="' . esc_url(home_url('/dogs/')) . '">Meet the Dogs</a></li>'
         . '<li><a href="' . esc_url(home_url('/foster/')) . '">Foster</a></li>'
         . '<li><a href="' . esc_url(home_url('/ways-to-help/')) . '">Donate</a></li>'
-        . '<li><a href="' . esc_url(home_url('/wishlist/')) . '">Shop</a></li>'
+        . '<li><a href="' . esc_url($wishlist) . '">Shop</a></li>'
         . '</ul>';
 }
 
@@ -58,6 +59,17 @@ function bpr_nav_link_classes($atts, $item, $args) {
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'bpr_nav_link_classes', 10, 3);
+
+// Friendlier browser-tab titles for the pet archives than "Dogs Archive".
+function bpr_archive_document_title($parts) {
+    if (is_post_type_archive('dog')) {
+        $parts['title'] = __('Adoptable Dogs', 'bubbles-pet-rescue');
+    } elseif (is_post_type_archive('cat')) {
+        $parts['title'] = __('Adoptable Cats', 'bubbles-pet-rescue');
+    }
+    return $parts;
+}
+add_filter('document_title_parts', 'bpr_archive_document_title');
 
 // Category for the starter page patterns in /patterns (files auto-register).
 function bpr_register_pattern_category() {
@@ -430,6 +442,8 @@ function bpr_pet_card($post_id = null, $variant = 'default') {
     $image_id = bpr_get_pet_primary_image_id($post_id);
     $permalink = get_permalink($post_id);
     $title = get_the_title($post_id);
+    $alt_details = implode(', ', array_filter(array($age, $gender, $breed)));
+    $alt = $alt_details ? $title . ', ' . $alt_details : $title;
 
     if ($variant === 'dog-archive') {
         $status_slugs = wp_get_post_terms($post_id, 'pet_status', array('fields' => 'slugs'));
@@ -446,6 +460,7 @@ function bpr_pet_card($post_id = null, $variant = 'default') {
                 if ($image_id) {
                     echo wp_get_attachment_image($image_id, 'large', false, array(
                         'class' => 'bpr-dog-directory-image',
+                        'alt' => $alt,
                         'loading' => 'lazy',
                         'sizes' => '(max-width: 767px) calc(100vw - 2rem), (max-width: 991px) 50vw, 300px',
                     ));
@@ -472,7 +487,7 @@ function bpr_pet_card($post_id = null, $variant = 'default') {
         <a href="<?php echo esc_url($permalink); ?>" aria-label="<?php echo esc_attr($title); ?>">
             <?php
             if ($image_id) {
-                echo wp_get_attachment_image($image_id, 'large', false, array('class' => 'bpr-pet-img', 'loading' => 'lazy'));
+                echo wp_get_attachment_image($image_id, 'large', false, array('class' => 'bpr-pet-img', 'alt' => $alt, 'loading' => 'lazy'));
             } else {
                 echo '<div class="bpr-pet-img d-flex align-items-center justify-content-center"><i class="bi bi-heart-pulse fs-1 text-primary"></i></div>';
             }

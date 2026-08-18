@@ -28,7 +28,7 @@ foreach ($dogs as $dog) {
     $dog_groups[$is_soon ? 'soon' : 'adoptable'][] = $dog;
 }
 ?>
-<main class="bpr-dog-archive">
+<main id="bpr-main" class="bpr-dog-archive">
     <div class="container bpr-content-narrow">
         <nav class="bpr-breadcrumb" aria-label="Breadcrumb">
             <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>

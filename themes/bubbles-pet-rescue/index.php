@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="bpr-section">
+<main id="bpr-main" class="bpr-section">
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-8 mx-auto">

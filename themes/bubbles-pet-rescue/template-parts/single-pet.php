@@ -158,6 +158,7 @@
                                                 <button class="bpr-gallery-open" type="button" data-bs-toggle="modal" data-bs-target="#<?php echo esc_attr($modal_id); ?>" data-bpr-slide="<?php echo esc_attr($index); ?>" aria-label="Open photo <?php echo esc_attr($index + 1); ?> of <?php echo esc_attr(get_the_title()); ?>">
                                                     <?php echo wp_get_attachment_image($image_id, 'large', false, array(
                                                         'class' => 'd-block w-100 bpr-profile-carousel-image',
+                                                        'alt' => sprintf('%s — photo %d', get_the_title(), $index + 1),
                                                         'loading' => $index === 0 ? 'eager' : 'lazy',
                                                         'sizes' => '(max-width: 991px) calc(100vw - 2rem), 480px',
                                                     )); ?>
@@ -217,7 +218,7 @@
                                     <div class="carousel-inner">
                                         <?php foreach ($gallery_ids as $index => $image_id) : ?>
                                             <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
-                                                <?php echo wp_get_attachment_image($image_id, 'full', false, array('class' => 'd-block bpr-modal-image', 'loading' => 'lazy')); ?>
+                                                <?php echo wp_get_attachment_image($image_id, 'full', false, array('class' => 'd-block bpr-modal-image', 'alt' => sprintf('%s — photo %d', get_the_title(), $index + 1), 'loading' => 'lazy')); ?>
                                             </div>
                                         <?php endforeach; ?>
                                     </div>
