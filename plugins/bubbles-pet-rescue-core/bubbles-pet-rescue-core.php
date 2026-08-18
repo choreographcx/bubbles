@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Bubbles Pets Rescue Core
  * Description: Manages Bubbles Pets Rescue dogs, cats, pet details, statuses, galleries, and saved applications independently from the active theme.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Bubbles Pets Rescue
  * Text Domain: bubbles-pet-rescue-core
  * Requires at least: 6.0
@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_CORE_VERSION', '1.1.0');
+define('BPR_CORE_VERSION', '1.2.0');
 define('BPR_CORE_FILE', __FILE__);
 define('BPR_CORE_DIR', plugin_dir_path(__FILE__));
 define('BPR_CORE_URL', plugin_dir_url(__FILE__));
@@ -21,6 +21,7 @@ define('BPR_CORE_URL', plugin_dir_url(__FILE__));
 require_once BPR_CORE_DIR . 'includes/helpers.php';
 require_once BPR_CORE_DIR . 'includes/admin.php';
 require_once BPR_CORE_DIR . 'includes/applications.php';
+require_once BPR_CORE_DIR . 'includes/social.php';
 
 function bpr_core_is_active() {
     return true;
