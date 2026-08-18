@@ -107,7 +107,7 @@
                         <?php if ($wishlist_link) : ?>
                             <section class="bpr-profile-support" aria-labelledby="bpr-support-<?php echo esc_attr($post_id); ?>">
                                 <h2 id="bpr-support-<?php echo esc_attr($post_id); ?>">Want to send some love this way?</h2>
-                                <p>You can help with food, bedding, toys, and care supplies through the Bubbles Pet Rescue Amazon wishlist.</p>
+                                <p>You can help with food, bedding, toys, and care supplies through the Bubbles Pets Rescue Amazon wishlist.</p>
                                 <a href="<?php echo esc_url($wishlist_link); ?>" target="_blank" rel="noopener">Shop the Amazon wishlist</a>
                             </section>
                         <?php endif; ?>

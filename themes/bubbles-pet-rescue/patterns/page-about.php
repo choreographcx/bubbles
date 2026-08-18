@@ -14,7 +14,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"bpr-lede"} -->
-<p class="bpr-lede">Bubbles Pet Rescue is a volunteer-run animal rescue in the UAE, dedicated to rescuing and rehoming stray, neglected, abandoned, abused, and surrendered pets.</p>
+<p class="bpr-lede">Bubbles Pets Rescue is a volunteer-run animal rescue in the UAE, dedicated to rescuing and rehoming stray, neglected, abandoned, abused, and surrendered pets.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"bpr-section-title"} -->
@@ -83,7 +83,7 @@
 <li>Every animal is sterilised, vaccinated, microchipped, and treated before adoption, unless medically advised otherwise.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Every animal stays microchipped under Bubbles Pet Rescue's name for lifelong safety and traceability.</li>
+<li>Every animal stays microchipped under Bubbles Pets Rescue's name for lifelong safety and traceability.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Every adopter is screened, every home is checked, and every placement puts the animal's welfare first.</li>

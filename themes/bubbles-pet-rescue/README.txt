@@ -1,15 +1,15 @@
-Bubbles Pet Rescue WordPress Theme
+Bubbles Pets Rescue WordPress Theme
 Version 1.2.4
 
 Recommended Installation Order
 1. Upload and activate bubbles-pet-rescue-core.zip under Plugins > Add New.
-2. Upload and activate the Bubbles Pet Rescue theme under Appearance > Themes.
+2. Upload and activate the Bubbles Pets Rescue theme under Appearance > Themes.
 3. Go to Bubbles Rescue in WordPress Admin to add and manage dogs and cats.
 4. Go to Appearance > Customize > Bubbles Rescue Settings to review the Amazon Wishlist URL, contact links, and home-page copy.
 5. Add menu links for Dogs, Cats, Adoption Application, Foster Application, and Wishlist Needs.
 
 Why There Is a Separate Plugin
-The Bubbles Pet Rescue Core plugin owns dogs, cats, statuses, structured pet fields, galleries, and saved applications. The theme owns the visual design. This keeps rescue records safe when the theme is updated or replaced.
+The Bubbles Pets Rescue Core plugin owns dogs, cats, statuses, structured pet fields, galleries, and saved applications. The theme owns the visual design. This keeps rescue records safe when the theme is updated or replaced.
 
 Dog Directory Design
 The dogs archive now uses a compact, centered directory inspired by the supplied Chunkz & Tubz reference:

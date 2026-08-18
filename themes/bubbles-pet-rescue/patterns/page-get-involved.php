@@ -14,7 +14,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"bpr-lede"} -->
-<p class="bpr-lede">Bubbles Pet Rescue runs entirely on volunteers and community support. There is no paid staff, no shelter building, just people across the UAE who give what they can. Here is where you fit in.</p>
+<p class="bpr-lede">Bubbles Pets Rescue runs entirely on volunteers and community support. There is no paid staff, no shelter building, just people across the UAE who give what they can. Here is where you fit in.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"bpr-section-title"} -->

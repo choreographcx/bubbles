@@ -73,7 +73,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>Do adopted animals stay microchipped to the rescue?</summary><!-- wp:paragraph -->
-<p>Yes. Every rescue remains microchipped under Bubbles Pet Rescue's name for lifelong traceability, and our adoption agreement requires that an animal is never sold, abandoned, or independently rehomed. If circumstances change, the animal comes back to us and we find the next right home together.</p>
+<p>Yes. Every rescue remains microchipped under Bubbles Pets Rescue's name for lifelong traceability, and our adoption agreement requires that an animal is never sold, abandoned, or independently rehomed. If circumstances change, the animal comes back to us and we find the next right home together.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 

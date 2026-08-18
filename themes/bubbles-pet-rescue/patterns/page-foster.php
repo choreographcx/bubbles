@@ -22,7 +22,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Bubbles Pet Rescue is not a shelter. Our rescues wait in boarding facilities, veterinary clinics, and volunteers' homes. A foster home teaches an animal what family life feels like, tells us everything adopters need to know, and frees up the space and funds that pull the next animal off the street.</p>
+<p>Bubbles Pets Rescue is not a shelter. Our rescues wait in boarding facilities, veterinary clinics, and volunteers' homes. A foster home teaches an animal what family life feels like, tells us everything adopters need to know, and frees up the space and funds that pull the next animal off the street.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"bpr-section-title"} -->
@@ -118,7 +118,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Foster animals remain under the legal care and ownership of Bubbles Pet Rescue, microchipped and registered to the organisation. They must never be handed to anyone else without our approval. And if you fall in love, we celebrate foster fails: tell us before another adoption is confirmed, complete the adoption application, and your foster becomes family.</p>
+<p>Foster animals remain under the legal care and ownership of Bubbles Pets Rescue, microchipped and registered to the organisation. They must never be handed to anyone else without our approval. And if you fall in love, we celebrate foster fails: tell us before another adoption is confirmed, complete the adoption application, and your foster becomes family.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

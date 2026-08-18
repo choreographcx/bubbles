@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 
 function bpr_core_admin_menu() {
     add_menu_page(
-        __('Bubbles Pet Rescue', 'bubbles-pet-rescue-core'),
+        __('Bubbles Pets Rescue', 'bubbles-pet-rescue-core'),
         __('Bubbles Rescue', 'bubbles-pet-rescue-core'),
         'edit_posts',
         'bubbles-pet-rescue',
@@ -31,7 +31,7 @@ function bpr_core_dashboard_page() {
     $application_count = wp_count_posts('application');
     ?>
     <div class="wrap bpr-core-dashboard">
-        <h1><?php esc_html_e('Bubbles Pet Rescue', 'bubbles-pet-rescue-core'); ?></h1>
+        <h1><?php esc_html_e('Bubbles Pets Rescue', 'bubbles-pet-rescue-core'); ?></h1>
         <p><?php esc_html_e('Manage dogs, cats, photos, adoption details, and saved applications here. Pet records stay available even if the website theme changes.', 'bubbles-pet-rescue-core'); ?></p>
         <div class="bpr-core-dashboard-cards">
             <a href="<?php echo esc_url(admin_url('edit.php?post_type=dog')); ?>"><strong><?php echo esc_html((int) $dog_count->publish); ?></strong><span><?php esc_html_e('Published Dogs', 'bubbles-pet-rescue-core'); ?></span></a>

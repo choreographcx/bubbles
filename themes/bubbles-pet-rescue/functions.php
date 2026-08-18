@@ -23,7 +23,7 @@ add_action('after_setup_theme', 'bpr_theme_setup');
 function bpr_register_pattern_category() {
     if (function_exists('register_block_pattern_category')) {
         register_block_pattern_category('bubbles-pet-rescue', array(
-            'label' => __('Bubbles Pet Rescue', 'bubbles-pet-rescue'),
+            'label' => __('Bubbles Pets Rescue', 'bubbles-pet-rescue'),
         ));
     }
 }
@@ -45,7 +45,7 @@ function bpr_enqueue_assets() {
 add_action('wp_enqueue_scripts', 'bpr_enqueue_assets');
 
 /*
- * Compatibility fallback for sites where the companion Bubbles Pet Rescue Core
+ * Compatibility fallback for sites where the companion Bubbles Pets Rescue Core
  * plugin hasn't been activated yet. The plugin owns these content types when active.
  */
 function bpr_register_legacy_content_types() {
@@ -156,7 +156,7 @@ function bpr_legacy_pet_details_meta_box($post) {
         }
         echo '</p>';
     }
-    echo '</div><p><strong>For image galleries and the full pet profile, activate the Bubbles Pet Rescue Core plugin.</strong></p>';
+    echo '</div><p><strong>For image galleries and the full pet profile, activate the Bubbles Pets Rescue Core plugin.</strong></p>';
 }
 
 function bpr_save_legacy_pet_details($post_id) {
@@ -199,8 +199,8 @@ function bpr_customize_register($wp_customize) {
         'bpr_whatsapp_url' => array('WhatsApp URL', ''),
         'bpr_contact_email' => array('Contact Email', get_option('admin_email')),
         'bpr_hero_title' => array('Hero Title', 'Helping UAE rescue pets find safe, loving homes'),
-        'bpr_hero_text' => array('Hero Text', 'Bubbles Pet Rescue connects dogs and cats with adopters, fosters, and practical support through wishlist items and care supplies.'),
-        'bpr_home_intro_title' => array('Homepage Rescue Heading', 'Bubbles Pet Rescue'),
+        'bpr_hero_text' => array('Hero Text', 'Bubbles Pets Rescue connects dogs and cats with adopters, fosters, and practical support through wishlist items and care supplies.'),
+        'bpr_home_intro_title' => array('Homepage Rescue Heading', 'Bubbles Pets Rescue'),
     );
 
     foreach ($settings as $key => $data) {

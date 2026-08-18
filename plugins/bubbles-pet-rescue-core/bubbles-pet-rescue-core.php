@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Bubbles Pet Rescue Core
- * Description: Manages Bubbles Pet Rescue dogs, cats, pet details, statuses, galleries, and saved applications independently from the active theme.
+ * Plugin Name: Bubbles Pets Rescue Core
+ * Description: Manages Bubbles Pets Rescue dogs, cats, pet details, statuses, galleries, and saved applications independently from the active theme.
  * Version: 1.1.0
- * Author: Bubbles Pet Rescue
+ * Author: Bubbles Pets Rescue
  * Text Domain: bubbles-pet-rescue-core
  * Requires at least: 6.0
  * Requires PHP: 7.4

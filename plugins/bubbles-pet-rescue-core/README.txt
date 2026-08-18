@@ -1,4 +1,4 @@
-Bubbles Pet Rescue Core
+Bubbles Pets Rescue Core
 
 This plugin keeps rescue data separate from the website theme. It manages:
 - Dogs and cats
@@ -11,8 +11,8 @@ This plugin keeps rescue data separate from the website theme. It manages:
 
 Installation
 1. Upload bubbles-pet-rescue-core.zip under Plugins > Add New > Upload Plugin.
-2. Activate Bubbles Pet Rescue Core.
-3. Install and activate the matching Bubbles Pet Rescue theme.
+2. Activate Bubbles Pets Rescue Core.
+3. Install and activate the matching Bubbles Pets Rescue theme.
 4. Manage pets from the Bubbles Rescue menu.
 
 Existing Data

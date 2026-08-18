@@ -25,7 +25,7 @@ if ($hero_pet_id) {
                 <div class="col-lg-6">
                     <span class="bpr-pill mb-3"><i class="bi bi-heart-fill"></i> UAE Pet Rescue</span>
                     <h1 class="display-4 bpr-heading mb-4"><?php echo esc_html(get_theme_mod('bpr_hero_title', 'Helping UAE rescue pets find safe, loving homes')); ?></h1>
-                    <p class="bpr-lede mb-4"><?php echo esc_html(get_theme_mod('bpr_hero_text', 'Bubbles Pet Rescue connects dogs and cats with adopters, fosters, and practical support through wishlist items and care supplies.')); ?></p>
+                    <p class="bpr-lede mb-4"><?php echo esc_html(get_theme_mod('bpr_hero_text', 'Bubbles Pets Rescue connects dogs and cats with adopters, fosters, and practical support through wishlist items and care supplies.')); ?></p>
                     <div class="d-flex flex-wrap gap-3">
                         <a class="btn btn-bpr-primary" href="<?php echo esc_url(home_url('/dogs/')); ?>">Meet the Dogs</a>
                         <a class="btn btn-bpr-secondary" href="<?php echo esc_url(home_url('/cats/')); ?>">Meet the Cats</a>
@@ -66,7 +66,7 @@ if ($hero_pet_id) {
                             </div>
                         </div>
                     <?php else : ?>
-                        <div class="bpr-card p-4 text-center"><img class="img-fluid rounded-4" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo.png'); ?>" alt="Bubbles Pet Rescue Logo"></div>
+                        <div class="bpr-card p-4 text-center"><img class="img-fluid rounded-4" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo.png'); ?>" alt="Bubbles Pets Rescue Logo"></div>
                     <?php endif; ?>
                 </div>
             </div>

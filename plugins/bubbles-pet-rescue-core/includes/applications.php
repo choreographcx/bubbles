@@ -711,7 +711,7 @@ function bpr_core_render_applications_page() {
     echo '<div class="wrap"><h1>' . esc_html__('Applications & Messages', 'bubbles-pet-rescue-core') . '</h1>';
 
     if (!bpr_core_forminator_tables_exist()) {
-        echo '<div class="notice notice-warning"><p><strong>Bubbles Pet Rescue:</strong> '
+        echo '<div class="notice notice-warning"><p><strong>Bubbles Pets Rescue:</strong> '
             . esc_html__('Forminator submission tables were not found. Forminator entries will not appear until the plugin is active and forms store submissions.', 'bubbles-pet-rescue-core')
             . '</p></div>';
     }
