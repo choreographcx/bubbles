@@ -87,6 +87,10 @@ function bpr_core_forminator_forms() {
 
 /**
  * element_id => label map, read from the stored form definition.
+ *
+ * Handles both storage layouts Forminator uses for the field list
+ * (wrapper-nested and flat), with the form's post_content JSON as a
+ * final fallback.
  */
 function bpr_core_forminator_field_labels($form_id) {
     static $cache = array();
@@ -96,26 +100,59 @@ function bpr_core_forminator_field_labels($form_id) {
     }
 
     $labels = array();
-    $meta = get_post_meta($form_id, 'forminator_form_meta', true);
-    $meta = maybe_unserialize($meta);
-    $wrappers = (is_array($meta) && !empty($meta['fields']) && is_array($meta['fields'])) ? $meta['fields'] : array();
 
-    foreach ($wrappers as $wrapper) {
-        $fields = (is_array($wrapper) && !empty($wrapper['fields']) && is_array($wrapper['fields'])) ? $wrapper['fields'] : array();
-        foreach ($fields as $field) {
-            if (!is_array($field) || empty($field['element_id'])) {
+    $collect = static function ($field) use (&$labels) {
+        if (!is_array($field) || empty($field['element_id'])) {
+            return;
+        }
+        $label = '';
+        if (!empty($field['field_label']) && is_string($field['field_label'])) {
+            $label = $field['field_label'];
+        } elseif (!empty($field['label']) && is_string($field['label'])) {
+            $label = $field['label'];
+        } elseif (!empty($field['section_title']) && is_string($field['section_title'])) {
+            $label = $field['section_title'];
+        } elseif (!empty($field['placeholder']) && is_string($field['placeholder'])) {
+            $label = $field['placeholder'];
+        }
+        $label = trim(wp_strip_all_tags(html_entity_decode($label, ENT_QUOTES, 'UTF-8')));
+        if ($label !== '' && !isset($labels[(string) $field['element_id']])) {
+            $labels[(string) $field['element_id']] = $label;
+        }
+    };
+
+    // 1) Stored form definition: wrapper-nested or flat field lists.
+    $meta = maybe_unserialize(get_post_meta($form_id, 'forminator_form_meta', true));
+    if (is_array($meta) && !empty($meta['fields']) && is_array($meta['fields'])) {
+        foreach ($meta['fields'] as $item) {
+            if (!is_array($item)) {
                 continue;
             }
-            $label = '';
-            if (!empty($field['field_label'])) {
-                $label = (string) $field['field_label'];
-            } elseif (!empty($field['section_title'])) {
-                $label = (string) $field['section_title'];
+            if (!empty($item['fields']) && is_array($item['fields'])) {
+                foreach ($item['fields'] as $field) {
+                    $collect($field);
+                }
+            } else {
+                $collect($item);
             }
-            $label = trim(wp_strip_all_tags(html_entity_decode($label, ENT_QUOTES, 'UTF-8')));
-            if ($label !== '') {
-                $labels[(string) $field['element_id']] = $label;
-            }
+        }
+    }
+
+    // 2) Fallback: recursive walk of the form post_content JSON.
+    if (!$labels) {
+        $post = get_post($form_id);
+        $json = $post ? json_decode((string) $post->post_content, true) : null;
+        if (is_array($json)) {
+            $walk = static function ($node) use (&$walk, $collect) {
+                if (!is_array($node)) {
+                    return;
+                }
+                $collect($node);
+                foreach ($node as $child) {
+                    $walk($child);
+                }
+            };
+            $walk($json);
         }
     }
 
@@ -146,7 +183,7 @@ function bpr_core_forminator_field_roles($form_id) {
         if (!$roles['phone'] && preg_match('/phone|mobile|whatsapp/i', $label) && stripos($label, 'emergency') === false) {
             $roles['phone'] = $element_id;
         }
-        if (preg_match('/name\s+of\s+(the\s+)?(rescue|foster\s+animal|dog|cat|pet)/i', $label)) {
+        if (preg_match('/name\s+of\s+(the\s+)?(rescue|foster\s+animal|animal|dog|cat|pet)/i', $label)) {
             $roles['pets'][] = $element_id;
         }
     }
@@ -155,22 +192,66 @@ function bpr_core_forminator_field_roles($form_id) {
     return $roles;
 }
 
-function bpr_core_forminator_entry_value($meta, $element_id) {
+function bpr_core_forminator_entry_value($meta, $element_id, $glue = ', ') {
     if ($element_id === '' || !array_key_exists($element_id, (array) $meta)) {
         return '';
     }
     $value = $meta[$element_id];
     if (is_array($value)) {
-        $value = implode(', ', array_map('strval', array_filter($value, 'is_scalar')));
+        // Grouped fields (e.g. Name with first/last parts) store sub-values.
+        $value = implode($glue, array_filter(array_map('trim', array_map('strval', array_filter($value, 'is_scalar'))), 'strlen'));
     }
     return trim((string) $value);
 }
 
+/**
+ * First non-empty value whose meta key starts with a Forminator element-id
+ * prefix such as name-, email-, phone-.
+ */
+function bpr_core_forminator_value_by_prefix($meta, $prefix, $glue = ', ') {
+    foreach ((array) $meta as $key => $value) {
+        if (preg_match('/^' . preg_quote($prefix, '/') . '\d+$/', (string) $key)) {
+            $found = bpr_core_forminator_entry_value($meta, (string) $key, $glue);
+            if ($found !== '') {
+                return $found;
+            }
+        }
+    }
+    return '';
+}
+
 function bpr_core_forminator_entry_from($meta, $form_id) {
     $roles = bpr_core_forminator_field_roles($form_id);
-    $name = bpr_core_forminator_entry_value($meta, $roles['name']);
+
+    // Names join grouped parts with spaces, not commas.
+    $name = bpr_core_forminator_entry_value($meta, $roles['name'], ' ');
+    if ($name === '') {
+        $name = bpr_core_forminator_value_by_prefix($meta, 'name-', ' ');
+    }
+
     $email = bpr_core_forminator_entry_value($meta, $roles['email']);
+    if ($email === '') {
+        $email = bpr_core_forminator_value_by_prefix($meta, 'email-');
+    }
+    if ($email === '') {
+        // Last resort: any value in the entry that looks like an email.
+        foreach ((array) $meta as $key => $value) {
+            if (strpos((string) $key, '_') === 0) {
+                continue;
+            }
+            foreach ((is_array($value) ? $value : array($value)) as $candidate) {
+                if (is_string($candidate) && is_email(trim($candidate))) {
+                    $email = trim($candidate);
+                    break 2;
+                }
+            }
+        }
+    }
+
     $phone = bpr_core_forminator_entry_value($meta, $roles['phone']);
+    if ($phone === '') {
+        $phone = bpr_core_forminator_value_by_prefix($meta, 'phone-');
+    }
 
     $contact = $email !== '' ? $email : $phone;
     if ($name === '') {
