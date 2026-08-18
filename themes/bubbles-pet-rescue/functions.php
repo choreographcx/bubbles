@@ -21,6 +21,24 @@ function bpr_theme_setup() {
 }
 add_action('after_setup_theme', 'bpr_theme_setup');
 
+// Bootstrap classes for menus assigned to the primary (header) location, so
+// menus built in Appearance > Menus render with the navbar styling.
+function bpr_nav_item_classes($classes, $item, $args) {
+    if (isset($args->theme_location) && $args->theme_location === 'primary') {
+        $classes[] = 'nav-item';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'bpr_nav_item_classes', 10, 3);
+
+function bpr_nav_link_classes($atts, $item, $args) {
+    if (isset($args->theme_location) && $args->theme_location === 'primary') {
+        $atts['class'] = isset($atts['class']) && $atts['class'] !== '' ? $atts['class'] . ' nav-link' : 'nav-link';
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'bpr_nav_link_classes', 10, 3);
+
 // Category for the starter page patterns in /patterns (files auto-register).
 function bpr_register_pattern_category() {
     if (function_exists('register_block_pattern_category')) {
