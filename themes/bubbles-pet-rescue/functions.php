@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_THEME_VERSION', '1.4.3');
+define('BPR_THEME_VERSION', '1.4.4');
 
 function bpr_theme_setup() {
     load_theme_textdomain('bubbles-pet-rescue', get_template_directory() . '/languages');
@@ -27,7 +27,7 @@ add_action('after_setup_theme', 'bpr_theme_setup');
 function bpr_footer_menu_get_involved() {
     $wishlist = get_theme_mod('bpr_amazon_wishlist_url') ?: home_url('/wishlist/');
     echo '<ul class="list-unstyled mb-0 bpr-footer-menu">'
-        . '<li><a href="' . esc_url(home_url('/dogs/')) . '">Meet the Dogs</a></li>'
+        . '<li><a href="' . esc_url(home_url('/meet-the-animals/')) . '">Meet the Animals</a></li>'
         . '<li><a href="' . esc_url(home_url('/foster/')) . '">Foster</a></li>'
         . '<li><a href="' . esc_url(home_url('/ways-to-help/')) . '">Donate</a></li>'
         . '<li><a href="' . esc_url($wishlist) . '">Shop</a></li>'
@@ -59,6 +59,22 @@ function bpr_nav_link_classes($atts, $item, $args) {
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'bpr_nav_link_classes', 10, 3);
+
+// Once the combined Meet the Animals page exists, the old dog/cat archive
+// URLs permanently redirect to it with the matching filter pre-applied.
+function bpr_pet_archive_redirect() {
+    if (!is_post_type_archive('dog') && !is_post_type_archive('cat')) {
+        return;
+    }
+    $page = get_page_by_path('meet-the-animals');
+    if (!$page || $page->post_status !== 'publish') {
+        return;
+    }
+    $species = is_post_type_archive('dog') ? 'dog' : 'cat';
+    wp_safe_redirect(add_query_arg('species', $species, get_permalink($page)), 301);
+    exit;
+}
+add_action('template_redirect', 'bpr_pet_archive_redirect');
 
 // Friendlier browser-tab titles for the pet archives than "Dogs Archive".
 function bpr_archive_document_title($parts) {
