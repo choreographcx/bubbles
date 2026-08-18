@@ -1441,6 +1441,25 @@ iframe {
   background: var(--bpr-deep-blue);
 }
 
+/* Primary menu: bold uppercase links, with the last item as a CTA pill. */
+.bpr-navbar .navbar-nav > .nav-item > .nav-link {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.bpr-navbar .navbar-nav > .nav-item:last-child > .nav-link {
+  background: var(--bpr-blue);
+  border-radius: 999px;
+  color: var(--bpr-white);
+  padding: 0.6rem 1.35rem;
+}
+.bpr-navbar .navbar-nav > .nav-item:last-child > .nav-link:hover {
+  background: var(--bpr-deep-blue);
+  color: var(--bpr-white);
+}
+
 /* Mobile menu: full-height panel sliding in from the right */
 .bpr-offcanvas.offcanvas-lg {
   width: min(20rem, 86vw);
@@ -1464,6 +1483,10 @@ iframe {
   }
   .bpr-offcanvas .navbar-nav > .nav-item:last-child > .nav-link {
     border-bottom: 0;
+    border-radius: 999px;
+    margin-top: 0.9rem;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
   }
 }
 
