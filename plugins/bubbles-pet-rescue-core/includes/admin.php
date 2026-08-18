@@ -19,7 +19,8 @@ function bpr_core_admin_menu() {
     add_submenu_page('bubbles-pet-rescue', __('Add Dog', 'bubbles-pet-rescue-core'), __('Add Dog', 'bubbles-pet-rescue-core'), 'edit_posts', 'post-new.php?post_type=dog');
     add_submenu_page('bubbles-pet-rescue', __('All Cats', 'bubbles-pet-rescue-core'), __('All Cats', 'bubbles-pet-rescue-core'), 'edit_posts', 'edit.php?post_type=cat');
     add_submenu_page('bubbles-pet-rescue', __('Add Cat', 'bubbles-pet-rescue-core'), __('Add Cat', 'bubbles-pet-rescue-core'), 'edit_posts', 'post-new.php?post_type=cat');
-    add_submenu_page('bubbles-pet-rescue', __('Applications', 'bubbles-pet-rescue-core'), __('Applications', 'bubbles-pet-rescue-core'), 'edit_posts', 'edit.php?post_type=application');
+    // The Applications & Messages page (includes/applications.php) replaces the
+    // old raw 'application' post-type listing; it also shows Forminator entries.
     add_submenu_page('bubbles-pet-rescue', __('Pet Statuses', 'bubbles-pet-rescue-core'), __('Pet Statuses', 'bubbles-pet-rescue-core'), 'manage_categories', 'edit-tags.php?taxonomy=pet_status&post_type=dog');
 }
 add_action('admin_menu', 'bpr_core_admin_menu');
