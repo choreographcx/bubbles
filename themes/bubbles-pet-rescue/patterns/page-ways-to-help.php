@@ -1,16 +1,16 @@
 <?php
 /**
- * Title: Page: Get Involved
- * Slug: bubbles-pet-rescue/page-get-involved
+ * Title: Page: Ways to Help
+ * Slug: bubbles-pet-rescue/page-ways-to-help
  * Categories: bubbles-pet-rescue
  * Block Types: core/post-content
  * Post Types: page
  * Viewport Width: 1100
- * Description: Full Get Involved page: volunteering roles, wishlist support, and partnership opportunities.
+ * Description: Full Ways to Help page: volunteering roles, wishlist support, and partnership opportunities.
  */
 ?>
 <!-- wp:paragraph {"className":"bpr-pill"} -->
-<p class="bpr-pill">Get Involved</p>
+<p class="bpr-pill">Ways to Help</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"bpr-lede"} -->
@@ -120,7 +120,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Message us on WhatsApp at <a href="https://wa.me/971508083083">+971 50 808 3083</a> and tell us how you would like to get involved, or start a foster application today.</p>
+<p>Message us on WhatsApp at <a href="https://wa.me/971508083083">+971 50 808 3083</a> and tell us how you would like to help, or start a foster application today.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

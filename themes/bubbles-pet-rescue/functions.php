@@ -28,7 +28,7 @@ function bpr_footer_menu_get_involved() {
     echo '<ul class="list-unstyled mb-0 bpr-footer-menu">'
         . '<li><a href="' . esc_url(home_url('/dogs/')) . '">Meet the Dogs</a></li>'
         . '<li><a href="' . esc_url(home_url('/foster/')) . '">Foster</a></li>'
-        . '<li><a href="' . esc_url(home_url('/get-involved/')) . '">Donate</a></li>'
+        . '<li><a href="' . esc_url(home_url('/ways-to-help/')) . '">Donate</a></li>'
         . '<li><a href="' . esc_url(home_url('/wishlist/')) . '">Shop</a></li>'
         . '</ul>';
 }
