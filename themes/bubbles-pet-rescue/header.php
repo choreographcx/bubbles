@@ -13,9 +13,15 @@
             <a class="navbar-brand d-flex align-items-center gap-3" href="<?php echo esc_url(home_url('/')); ?>">
                 <?php if (has_custom_logo()) { the_custom_logo(); } else { ?><img class="bpr-logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo.png'); ?>" alt="<?php bloginfo('name'); ?>"><?php } ?>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bprMenu" aria-controls="bprMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="bprMenu">
-                <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'navbar-nav ms-auto align-items-lg-center gap-lg-2', 'fallback_cb' => 'bpr_default_menu', 'depth' => 2)); ?>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bprMenu" aria-controls="bprMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="offcanvas-lg offcanvas-end bpr-offcanvas" tabindex="-1" id="bprMenu" aria-labelledby="bprMenuLabel">
+                <div class="offcanvas-header">
+                    <span class="offcanvas-title bpr-section-title h5 mb-0" id="bprMenuLabel"><?php esc_html_e('Menu', 'bubbles-pet-rescue'); ?></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#bprMenu" aria-label="<?php esc_attr_e('Close', 'bubbles-pet-rescue'); ?>"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'navbar-nav ms-auto align-items-lg-center gap-lg-2', 'fallback_cb' => 'bpr_default_menu', 'depth' => 2)); ?>
+                </div>
             </div>
         </div>
     </nav>

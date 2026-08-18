@@ -24,6 +24,7 @@
         <p class="small mb-0">&copy; <?php echo esc_html(date('Y')); ?> <?php bloginfo('name'); ?>. Built with care for rescue work in the UAE.</p>
     </div>
 </footer>
+<button type="button" class="bpr-back-to-top" id="bprBackToTop" aria-label="<?php esc_attr_e('Back to top', 'bubbles-pet-rescue'); ?>"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
 <?php wp_footer(); ?>
 </body>
 </html>
