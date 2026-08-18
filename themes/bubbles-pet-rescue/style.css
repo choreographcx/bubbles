@@ -1559,3 +1559,25 @@ iframe {
   display: block;
   vertical-align: 0;
 }
+
+/* Header brand lockup: blue heart-paw mark with the wordmark to its right. */
+.bpr-brand-mark {
+  height: 52px;
+  width: auto;
+}
+.bpr-brand-wordmark {
+  color: var(--bpr-blue);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+@media (max-width: 991.98px) {
+  .bpr-brand-mark {
+    height: 44px;
+  }
+  .bpr-brand-wordmark {
+    font-size: 1rem;
+  }
+}

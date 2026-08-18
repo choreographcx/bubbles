@@ -10,8 +10,9 @@
 <header class="bpr-navbar sticky-top">
     <nav class="navbar navbar-expand-lg py-3">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-3" href="<?php echo esc_url(home_url('/')); ?>">
-                <?php if (has_custom_logo()) { the_custom_logo(); } else { ?><img class="bpr-logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-logo.png'); ?>" alt="<?php bloginfo('name'); ?>"><?php } ?>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="<?php echo esc_url(home_url('/')); ?>">
+                <img class="bpr-brand-mark" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-mark.svg?ver=' . BPR_THEME_VERSION); ?>" alt="">
+                <span class="bpr-brand-wordmark"><span class="visually-hidden"><?php bloginfo('name'); ?></span><span aria-hidden="true">Bubbles.Pets<br>Rescue</span></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bprMenu" aria-controls="bprMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="offcanvas-lg offcanvas-end bpr-offcanvas" tabindex="-1" id="bprMenu" aria-labelledby="bprMenuLabel">
