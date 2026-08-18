@@ -1461,10 +1461,10 @@ iframe {
 }
 
 /* Mobile menu: full-height panel sliding in from the right */
-.bpr-offcanvas.offcanvas-lg {
-  width: min(20rem, 86vw);
-}
 @media (max-width: 991.98px) {
+  .bpr-offcanvas.offcanvas-lg {
+    width: min(20rem, 86vw);
+  }
   .bpr-offcanvas {
     background: linear-gradient(180deg, var(--bpr-white), var(--bpr-sky));
     border-left: 1px solid rgba(23, 103, 161, 0.12);
