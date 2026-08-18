@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_THEME_VERSION', '1.3.0');
+define('BPR_THEME_VERSION', '1.3.1');
 
 function bpr_theme_setup() {
     load_theme_textdomain('bubbles-pet-rescue', get_template_directory() . '/languages');
@@ -217,6 +217,8 @@ function bpr_customize_register($wp_customize) {
     $settings = array(
         'bpr_amazon_wishlist_url' => array('Amazon Wishlist URL', 'https://www.amazon.ae/hz/wishlist/ls/1TTLP5QW4EVHM'),
         'bpr_instagram_url' => array('Instagram URL', ''),
+        'bpr_facebook_url' => array('Facebook URL', ''),
+        'bpr_tiktok_url' => array('TikTok URL', ''),
         'bpr_whatsapp_url' => array('WhatsApp URL', ''),
         'bpr_contact_email' => array('Contact Email', get_option('admin_email')),
         'bpr_hero_title' => array('Hero Title', 'Helping UAE rescue pets find safe, loving homes'),
