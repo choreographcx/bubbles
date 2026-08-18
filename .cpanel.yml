@@ -5,8 +5,12 @@
 # runs the tasks below. They copy ONLY the custom theme and custom plugin into
 # the live wp-content folder — third-party plugins and uploads are never
 # touched, so nothing gets accidentally overwritten or downgraded.
+#
+# $HOME resolves to the account's home directory, so this works on any server
+# regardless of the cPanel username.
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/bubblespetrescue/public_html/wp-content
+    - export DEPLOYPATH=$HOME/public_html/wp-content
+    - /bin/mkdir -p "$DEPLOYPATH/themes" "$DEPLOYPATH/plugins"
     - /bin/cp -R themes/bubbles-pet-rescue "$DEPLOYPATH/themes/"
     - /bin/cp -R plugins/bubbles-pet-rescue-core "$DEPLOYPATH/plugins/"
