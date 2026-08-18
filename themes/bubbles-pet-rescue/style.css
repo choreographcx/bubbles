@@ -562,16 +562,6 @@ a:hover { color: var(--bpr-deep-blue); }
   margin-top: 0.12rem;
 }
 
-.bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-body {
-  background: var(--bpr-deep-blue);
-}
-
-.bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-name a,
-.bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-meta,
-.bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-breed {
-  color: #fff;
-}
-
 .bpr-dog-directory-card-soon .bpr-dog-directory-body {
   border-top: 3px solid var(--bpr-aqua);
 }
@@ -852,28 +842,6 @@ a:hover { color: var(--bpr-deep-blue); }
     margin-bottom: 2rem;
   }
 
-  .bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-body {
-    background: #fff;
-  }
-
-  .bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-name a {
-    color: var(--bpr-ink);
-  }
-
-  .bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-meta,
-  .bpr-dog-card-column:nth-child(3n + 2) .bpr-dog-directory-breed {
-    color: var(--bpr-muted);
-  }
-
-  .bpr-dog-card-column:nth-child(even) .bpr-dog-directory-body {
-    background: var(--bpr-deep-blue);
-  }
-
-  .bpr-dog-card-column:nth-child(even) .bpr-dog-directory-name a,
-  .bpr-dog-card-column:nth-child(even) .bpr-dog-directory-meta,
-  .bpr-dog-card-column:nth-child(even) .bpr-dog-directory-breed {
-    color: #fff;
-  }
 }
 
 @media (max-width: 575.98px) {

@@ -29,7 +29,7 @@ foreach ($dogs as $dog) {
 }
 ?>
 <main id="bpr-main" class="bpr-dog-archive">
-    <div class="container bpr-content-narrow">
+    <div class="container">
         <nav class="bpr-breadcrumb" aria-label="Breadcrumb">
             <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
             <span aria-hidden="true">&raquo;</span>
@@ -60,9 +60,9 @@ foreach ($dogs as $dog) {
                 </h1>
 
                 <?php if ($group_dogs) : ?>
-                    <div class="row g-4 justify-content-center bpr-dog-card-grid">
+                    <div class="row g-4 bpr-dog-card-grid">
                         <?php foreach ($group_dogs as $dog) : ?>
-                            <div class="col-sm-6 col-lg-4 bpr-dog-card-column">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 bpr-dog-card-column">
                                 <?php bpr_pet_card($dog->ID, 'dog-archive'); ?>
                             </div>
                         <?php endforeach; ?>

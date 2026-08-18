@@ -39,7 +39,7 @@ $total = $species_counts['dog'] + $species_counts['cat'];
 $show_filter = $species_counts['dog'] > 0 && $species_counts['cat'] > 0;
 ?>
 <main id="bpr-main" class="bpr-section">
-    <div class="container bpr-content-narrow">
+    <div class="container">
         <nav class="bpr-breadcrumb" aria-label="Breadcrumb">
             <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
             <span aria-hidden="true">&raquo;</span>
@@ -93,9 +93,9 @@ $show_filter = $species_counts['dog'] > 0 && $species_counts['cat'] > 0;
                     <?php echo esc_html($section['title']); ?>
                 </h2>
 
-                <div class="row g-4 justify-content-center bpr-dog-card-grid">
+                <div class="row g-4 bpr-dog-card-grid">
                     <?php foreach ($group_pets as $pet) : ?>
-                        <div class="col-sm-6 col-lg-4 bpr-dog-card-column" data-species="<?php echo esc_attr(get_post_type($pet->ID)); ?>">
+                        <div class="col-sm-6 col-lg-4 col-xl-3 bpr-dog-card-column" data-species="<?php echo esc_attr(get_post_type($pet->ID)); ?>">
                             <?php bpr_pet_card($pet->ID, 'dog-archive'); ?>
                         </div>
                     <?php endforeach; ?>
