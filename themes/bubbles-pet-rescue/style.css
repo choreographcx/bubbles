@@ -1651,3 +1651,46 @@ iframe {
     max-width: 1400px;
   }
 }
+
+/* Animated hamburger: three bars that morph into an X while the menu is open. */
+.navbar-toggler.bpr-toggler {
+  border: 0;
+  padding: 0.45rem;
+}
+.navbar-toggler.bpr-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(23, 103, 161, 0.28);
+}
+.bpr-burger {
+  display: block;
+  height: 20px;
+  position: relative;
+  width: 26px;
+}
+.bpr-burger span {
+  background: var(--bpr-deep-blue);
+  border-radius: 2px;
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  transition: top 200ms ease, transform 220ms ease, opacity 160ms ease;
+  width: 100%;
+}
+.bpr-burger span:nth-child(1) { top: 0; }
+.bpr-burger span:nth-child(2) { top: 8.5px; }
+.bpr-burger span:nth-child(3) { top: 17px; }
+.navbar-toggler.is-open .bpr-burger span:nth-child(1) {
+  top: 8.5px;
+  transform: rotate(45deg);
+}
+.navbar-toggler.is-open .bpr-burger span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.4);
+}
+.navbar-toggler.is-open .bpr-burger span:nth-child(3) {
+  top: 8.5px;
+  transform: rotate(-45deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .bpr-burger span { transition: none; }
+}

@@ -58,3 +58,21 @@
         apply(preset);
     }
 })();
+
+/* Sync the animated hamburger with the offcanvas menu state. */
+(function () {
+    'use strict';
+
+    var menu = document.getElementById('bprMenu');
+    var toggler = document.querySelector('.navbar-toggler.bpr-toggler');
+    if (!menu || !toggler) { return; }
+
+    menu.addEventListener('show.bs.offcanvas', function () {
+        toggler.classList.add('is-open');
+        toggler.setAttribute('aria-expanded', 'true');
+    });
+    menu.addEventListener('hide.bs.offcanvas', function () {
+        toggler.classList.remove('is-open');
+        toggler.setAttribute('aria-expanded', 'false');
+    });
+})();

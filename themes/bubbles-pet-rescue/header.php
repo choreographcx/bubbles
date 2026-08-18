@@ -15,7 +15,7 @@
                 <img class="bpr-brand-mark" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/bubbles-mark.svg?ver=' . BPR_THEME_VERSION); ?>" alt="">
                 <span class="bpr-brand-wordmark"><span class="visually-hidden"><?php bloginfo('name'); ?></span><span aria-hidden="true">Bubbles.Pets<br>Rescue</span></span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bprMenu" aria-controls="bprMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler bpr-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bprMenu" aria-controls="bprMenu" aria-expanded="false" aria-label="<?php esc_attr_e('Open menu', 'bubbles-pet-rescue'); ?>"><span class="bpr-burger" aria-hidden="true"><span></span><span></span><span></span></span></button>
             <div class="offcanvas-lg offcanvas-end bpr-offcanvas" tabindex="-1" id="bprMenu" aria-labelledby="bprMenuLabel">
                 <div class="offcanvas-header">
                     <span class="offcanvas-title bpr-section-title h5 mb-0" id="bprMenuLabel"><?php esc_html_e('Menu', 'bubbles-pet-rescue'); ?></span>
