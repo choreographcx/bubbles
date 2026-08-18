@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BPR_THEME_VERSION', '1.3.8');
+define('BPR_THEME_VERSION', '1.3.9');
 
 function bpr_theme_setup() {
     load_theme_textdomain('bubbles-pet-rescue', get_template_directory() . '/languages');
@@ -16,10 +16,30 @@ function bpr_theme_setup() {
     add_editor_style('assets/css/editor-style.css');
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'bubbles-pet-rescue'),
-        'footer' => __('Footer Menu', 'bubbles-pet-rescue'),
+        'footer_get_involved' => __('Footer: Get Involved', 'bubbles-pet-rescue'),
+        'footer_about' => __('Footer: About Us', 'bubbles-pet-rescue'),
     ));
 }
 add_action('after_setup_theme', 'bpr_theme_setup');
+
+// Default footer menus, shown until real menus are assigned to the footer
+// locations in Appearance > Menus.
+function bpr_footer_menu_get_involved() {
+    echo '<ul class="list-unstyled mb-0 bpr-footer-menu">'
+        . '<li><a href="' . esc_url(home_url('/dogs/')) . '">Meet the Dogs</a></li>'
+        . '<li><a href="' . esc_url(home_url('/foster/')) . '">Foster</a></li>'
+        . '<li><a href="' . esc_url(home_url('/get-involved/')) . '">Donate</a></li>'
+        . '<li><a href="' . esc_url(home_url('/wishlist/')) . '">Shop</a></li>'
+        . '</ul>';
+}
+
+function bpr_footer_menu_about() {
+    echo '<ul class="list-unstyled mb-0 bpr-footer-menu">'
+        . '<li><a href="' . esc_url(home_url('/about/')) . '">Our Story</a></li>'
+        . '<li><a href="' . esc_url(home_url('/faq/')) . '">FAQ</a></li>'
+        . '<li><a href="' . esc_url(home_url('/contact/')) . '">Contact</a></li>'
+        . '</ul>';
+}
 
 // Bootstrap classes for menus assigned to the primary (header) location, so
 // menus built in Appearance > Menus render with the navbar styling.

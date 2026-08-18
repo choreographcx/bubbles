@@ -20,24 +20,20 @@ $bpr_email     = get_theme_mod('bpr_contact_email') ?: 'LittleAngelsUAE@outlook.
             </div>
 
             <div class="col-6 col-lg-3">
-                <h3 class="bpr-footer-heading"><?php esc_html_e('Helpful Links', 'bubbles-pet-rescue'); ?></h3>
-                <?php wp_nav_menu(array('theme_location' => 'footer', 'container' => false, 'menu_class' => 'list-unstyled mb-0 bpr-footer-menu')); ?>
+                <h3 class="bpr-footer-heading"><?php esc_html_e('Get Involved', 'bubbles-pet-rescue'); ?></h3>
+                <?php wp_nav_menu(array('theme_location' => 'footer_get_involved', 'container' => false, 'menu_class' => 'list-unstyled mb-0 bpr-footer-menu', 'fallback_cb' => 'bpr_footer_menu_get_involved')); ?>
             </div>
 
-            <div class="col-6 col-lg-3">
-                <h3 class="bpr-footer-heading"><?php esc_html_e('Contact Us', 'bubbles-pet-rescue'); ?></h3>
-                <div class="bpr-footer-contact">
-                    <div><i class="bi bi-whatsapp" aria-hidden="true"></i><a href="<?php echo esc_url($bpr_whatsapp); ?>">+971 50 808 3083</a></div>
-                    <div><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:<?php echo esc_attr($bpr_email); ?>"><?php echo esc_html($bpr_email); ?></a></div>
-                    <?php if ($wishlist = get_theme_mod('bpr_amazon_wishlist_url')) : ?>
-                        <div><i class="bi bi-gift-fill" aria-hidden="true"></i><a href="<?php echo esc_url($wishlist); ?>">Amazon Wishlist</a></div>
-                    <?php endif; ?>
-                </div>
+            <div class="col-6 col-lg-2">
+                <h3 class="bpr-footer-heading"><?php esc_html_e('About Us', 'bubbles-pet-rescue'); ?></h3>
+                <?php wp_nav_menu(array('theme_location' => 'footer_about', 'container' => false, 'menu_class' => 'list-unstyled mb-0 bpr-footer-menu', 'fallback_cb' => 'bpr_footer_menu_about')); ?>
             </div>
 
-            <div class="col-lg-2">
-                <h3 class="bpr-footer-heading"><?php esc_html_e('Follow Us', 'bubbles-pet-rescue'); ?></h3>
+            <div class="col-lg-3">
+                <h3 class="bpr-footer-heading"><?php esc_html_e('Get in Touch', 'bubbles-pet-rescue'); ?></h3>
                 <div class="bpr-social-links">
+                    <a href="<?php echo esc_url($bpr_whatsapp); ?>" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    <a href="mailto:<?php echo esc_attr($bpr_email); ?>" aria-label="<?php esc_attr_e('Email', 'bubbles-pet-rescue'); ?>"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
                     <a href="<?php echo esc_url($bpr_instagram); ?>" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
                     <a href="<?php echo esc_url($bpr_facebook); ?>" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
                     <?php if ($bpr_tiktok) : ?>
