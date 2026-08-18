@@ -1626,3 +1626,32 @@ iframe {
   outline: 3px solid var(--bpr-aqua);
   transform: none;
 }
+
+/* Floating WhatsApp button: bottom-left, opposite the back-to-top control. */
+.bpr-whatsapp-fab {
+  align-items: center;
+  background: #25d366;
+  border-radius: 50%;
+  bottom: 1.4rem;
+  box-shadow: 0 0.6rem 1.5rem rgba(15, 72, 111, 0.28);
+  color: var(--bpr-white);
+  display: flex;
+  font-size: 1.55rem;
+  height: 3.4rem;
+  justify-content: center;
+  left: 1.4rem;
+  position: fixed;
+  transition: transform 160ms ease, background 160ms ease;
+  width: 3.4rem;
+  z-index: 1040;
+}
+.bpr-whatsapp-fab:hover,
+.bpr-whatsapp-fab:focus {
+  background: #1ebe5b;
+  color: var(--bpr-white);
+  transform: scale(1.07);
+}
+@media (prefers-reduced-motion: reduce) {
+  .bpr-whatsapp-fab { transition: none; }
+  .bpr-whatsapp-fab:hover, .bpr-whatsapp-fab:focus { transform: none; }
+}

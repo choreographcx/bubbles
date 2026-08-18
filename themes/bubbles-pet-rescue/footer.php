@@ -52,6 +52,7 @@ $bpr_email     = get_theme_mod('bpr_contact_email') ?: 'LittleAngelsUAE@outlook.
         </div>
     </div>
 </footer>
+<a class="bpr-whatsapp-fab" href="<?php echo esc_url($bpr_whatsapp); ?>" target="_blank" rel="noopener" aria-label="<?php esc_attr_e('Chat with us on WhatsApp', 'bubbles-pet-rescue'); ?>"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
 <button type="button" class="bpr-back-to-top" id="bprBackToTop" aria-label="<?php esc_attr_e('Back to top', 'bubbles-pet-rescue'); ?>"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
 <?php wp_footer(); ?>
 </body>
