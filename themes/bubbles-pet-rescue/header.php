@@ -29,5 +29,5 @@
 </header>
 <?php
 function bpr_default_menu() {
-    echo '<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/dogs/')) . '">Dogs</a></li><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/cats/')) . '">Cats</a></li><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/adoption-application/')) . '">Adopt</a></li><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/foster-application/')) . '">Foster</a></li></ul>';
+    echo '<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/dogs/')) . '">Dogs</a></li><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/cats/')) . '">Cats</a></li><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/adoption-application/')) . '">Adopt</a></li><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/foster-application/')) . '">Foster</a></li><li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/ways-to-help/')) . '">Ways to Help</a></li></ul>';
 }
