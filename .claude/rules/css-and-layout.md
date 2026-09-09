@@ -36,6 +36,14 @@ Alternating treatments (`:nth-child(3n + 2)`, `:nth-child(even)`) read as
 re-alternates at another breakpoint. When removing one, remove every
 breakpoint's copy.
 
+## Mobile rules live in two files
+
+`assets/css/mobile-layout-v1.2.4.css` is enqueued after `style.css` and carries
+its own responsive overrides. The `v1.2.4` in the filename is historical, not a
+staleness marker — the file is current and is versioned by
+`BPR_THEME_VERSION` like everything else. When hunting or changing a responsive
+rule, grep both files, or a later override will silently undo the fix.
+
 ## Housekeeping
 
 - Append new rules to the end of `style.css` in labelled blocks; the file is
